@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ebaylg from "./../pictures/ebaylg.png";
-
+import ReactSearchBox from "react-search-box";
+import { search } from "./Reusable-Components/ButtonStyle";
 const HomeSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -158,15 +159,27 @@ const HomeSearch = () => {
         )}
       </div>
       <div className="flex  items-center border-2  border-black ml-3 w-4/5 ">
-        <div>
-          <i class="fa fa-search pl-2"></i>
-        </div>
-        <div>
-          {" "}
-          <input
-            type="text"
-            className="border-none active:border-none"
-            placeholder="Search for Anything"
+        <div className="w-full">
+          <ReactSearchBox
+            placeholder="SEARCH FOR ANYTHING"
+            leftIcon={
+              <>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </>
+            }
           />
         </div>
         <div className="ml-auto">
@@ -188,9 +201,7 @@ const HomeSearch = () => {
         </div>
       </div>
       <div>
-        <button class="bg-blue-500 ml-2 hover:bg-blue-700 text-white font-bold py-3 px-16 rounded">
-          Search
-        </button>
+        <button style={search}>Search</button>
       </div>
       <div>
         <a className="text-[#767676] ml-2" href="/">

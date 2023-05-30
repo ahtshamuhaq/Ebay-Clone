@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import { buttonsStyle } from "./ButtonStyle";
+import { shopNow } from "./ButtonStyle";
+import { letsGo } from "./ButtonStyle";
 
 const Carousal = () => {
   const slides = [
@@ -11,14 +12,15 @@ const Carousal = () => {
       buttonText: "Shop Now",
       textColor: "#07522c",
       bgColor: "#E8F377",
-      slideStyle: buttonsStyle,
+      slideStyle: shopNow,
     },
     {
       image: "https://i.ebayimg.com/images/g/pm8AAOSw4YtjTqdZ/s-l960.webp",
       title: "Slide 2",
       description: "Description 2",
-      buttonText: "Button 2",
+      buttonText: "letsGo ",
       bgColor: "#F8E376",
+      slideStyle: letsGo,
     },
   ];
   return (

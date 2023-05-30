@@ -1,5 +1,5 @@
 import "./App.css";
-import HomePage from "./Ui Components/HomePage";
+import HomePage from "./Ui-Components/HomePage";
 
 function App() {
   const listItems = [

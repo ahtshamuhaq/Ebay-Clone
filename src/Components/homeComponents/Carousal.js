@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import { shopNow } from "./../../uiComponents/reUsableComponents/ButtonStyle";
-import { letsGo } from "./../../uiComponents/reUsableComponents/ButtonStyle";
+import Button from "../common/Button";
 
 const Carousal = () => {
   const slides = [
@@ -12,7 +11,7 @@ const Carousal = () => {
       buttonText: "Shop Now",
       textColor: "#07522c",
       bgColor: "#E8F377",
-      slideStyle: shopNow,
+      variant: "transparent",
     },
     {
       image: "https://i.ebayimg.com/images/g/pm8AAOSw4YtjTqdZ/s-l960.webp",
@@ -20,7 +19,7 @@ const Carousal = () => {
       description: "Description 2",
       buttonText: "letsGo ",
       bgColor: "#F8E376",
-      slideStyle: letsGo,
+      variant: "errorText",
     },
   ];
   return (
@@ -38,10 +37,10 @@ const Carousal = () => {
             <p className="pt-4" style={{ color: slide.textColor }}>
               {slide.description}
             </p>
-            <button
+            <Button
+              variant={slide.variant}
               className="flex justify-between mt-5
                  "
-              style={slide.slideStyle}
             >
               {slide.buttonText}{" "}
               <svg
@@ -58,7 +57,7 @@ const Carousal = () => {
                   d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
                 />
               </svg>
-            </button>
+            </Button>
           </div>
           <img src={slide.image} alt="Slide" />
         </div>

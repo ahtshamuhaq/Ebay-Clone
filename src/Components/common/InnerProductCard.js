@@ -11,7 +11,8 @@ import gpay from "./../../pictures/gpay.jpg";
 import mastercard from "./../../pictures/mastercard.jpg";
 import visa from "./../../pictures/visa.jpg";
 import amex from "./../../pictures/amex.jpg";
-import { buyItNow, addToCart, addToWatchlist } from "./ButtonStyle";
+import Button from "./Button";
+
 const InnerProductCard = () => {
   const images = [Inner1, Inner2, Inner3, Inner4, Inner5, Inner6, Inner7];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -180,7 +181,7 @@ const InnerProductCard = () => {
                     {item.numOfBids}
                   </p>
 
-                  <button style={buyItNow}>{item.buttonText}</button>
+                  <Button variant="darkCyan">{item.buttonText}</Button>
                 </div>
               </div>
             </div>
@@ -199,15 +200,15 @@ const InnerProductCard = () => {
                   </h1>
                 </div>
                 <div className="flex flex-col ">
-                  <button className="mt-3" style={buyItNow}>
+                  <Button className="mt-3 " variant="darkCyan">
                     {item.buttonText1}
-                  </button>
-                  <button className="mt-3" style={addToCart}>
+                  </Button>
+                  <Button className="mt-3" variant="skyBlue">
                     {item.buttonText2}
-                  </button>
-                  <button className="mt-3" style={addToWatchlist}>
+                  </Button>
+                  <Button className="mt-3" variant="whiteLong">
                     {item.buttonText3}
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

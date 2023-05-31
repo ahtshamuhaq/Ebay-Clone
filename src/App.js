@@ -15,7 +15,7 @@ function App() {
     "Messages",
   ];
   return (
-    <div>
+    <div className="">
       <HomePage listItems={listItems} />
     </div>
   );

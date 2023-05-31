@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ebaylg from "./../../pictures/ebaylg.png";
 import ReactSearchBox from "react-search-box";
-import { search } from "./../../uiComponents/reUsableComponents/ButtonStyle";
+import Button from "../common/Button";
 const HomeSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -201,7 +201,7 @@ const HomeSearch = () => {
         </div>
       </div>
       <div>
-        <button style={search}>Search</button>
+        <Button variant="searchBox">Search</Button>
       </div>
       <div>
         <a className="text-[#767676] ml-2" href="/">

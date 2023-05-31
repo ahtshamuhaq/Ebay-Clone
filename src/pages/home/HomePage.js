@@ -1,31 +1,14 @@
 import React from "react";
-import HomeNav from "./../../uiComponents/homeComponents/HomeNav";
-import HomeSearch from "./../../uiComponents/homeComponents/HomeSearch";
-import CarousalNav from "./../../uiComponents/homeComponents/CarousalNav";
-import Carousal from "./../../uiComponents/homeComponents/Carousal";
-import CardsForSlider from "./../../uiComponents/reUsableComponents/CardsForSlider";
-import PopularCategories from "./../../uiComponents/reUsableComponents/PopularCategories";
-import {
-  letsGo,
-  shopNow,
-  search,
-  shopNowRedWhite,
-  findGuest,
-  LearnMore,
-  buyItNow,
-  addToCart,
-  addToWatchlist,
-  Wheels,
-  Continue,
-  facebook,
-  allHere,
-  visitWebsite,
-  moreTech,
-  brandAsus,
-  goToHomepage,
-} from "./../../uiComponents/reUsableComponents/ButtonStyle";
-import OuterCard from "./../../uiComponents/reUsableComponents/OuterCard";
-import InnerProductCard from "./../../uiComponents/reUsableComponents/InnerProductCard";
+import HomeNav from "./../../Components/homeComponents/HomeNav";
+import HomeSearch from "./../../Components/homeComponents/HomeSearch";
+import CarousalNav from "./../../Components/homeComponents/CarousalNav";
+import Carousal from "./../../Components/homeComponents/Carousal";
+import CardsForSlider from "./../../Components/common/CardsForSlider";
+import PopularCategories from "./../../Components/common/PopularCategories";
+
+import OuterCard from "./../../Components/common/OuterCard";
+import InnerProductCard from "./../../Components/common/InnerProductCard";
+import Button from "../../Components/common/Button";
 
 const HomePage = (props) => {
   return (
@@ -51,57 +34,25 @@ const HomePage = (props) => {
         <PopularCategories />
       </div>
       <div className="mt-4 mb-16 p-6 bg-[#E62048] flex flex-wrap justify-between ">
-        <button className="mb-2" style={letsGo}>
-          Shop now
-        </button>
-        <button className="mb-2" style={shopNow}>
-          Shop now
-        </button>
-        <button className="mb-2" style={search}>
-          Shop now
-        </button>
-        <button className="mb-2" style={shopNowRedWhite}>
-          Shop now
-        </button>
-        <button className="mb-2" style={findGuest}>
-          Shop now
-        </button>
-        <button className="mb-2" style={LearnMore}>
-          Shop now
-        </button>
-        <button className="mb-2" style={buyItNow}>
-          Shop now
-        </button>
-        <button className="mb-2" style={addToCart}>
-          Shop now
-        </button>
-        <button className="mb-2" style={addToWatchlist}>
-          Shop now
-        </button>
-        <button className="mb-2" style={Wheels}>
-          Shop now
-        </button>
-        <button className="mb-2" style={Continue}>
-          Shop now
-        </button>
-        <button className="mb-2" style={facebook}>
-          Shop now
-        </button>
-        <button className="mb-2" style={allHere}>
-          Shop now
-        </button>
-        <button className="mb-2" style={visitWebsite}>
-          Shop now
-        </button>
-        <button className="mb-2" style={moreTech}>
-          Shop now
-        </button>
-        <button className="mb-2" style={brandAsus}>
-          Shop now
-        </button>
-        <button className="mb-2" style={goToHomepage}>
-          Shop now
-        </button>
+        <Button variant="transparent" type="submit">
+          Shop Now
+        </Button>
+        <Button variant="errorText">Shop Now</Button>
+        <Button variant="searchBox">Shop Now</Button>
+        <Button variant="redWhite">Shop Now</Button>
+        <Button variant="blueSmall">Shop Now</Button>
+        <Button variant="white">Shop Now</Button>
+        <Button variant="darkCyan">Shop Now</Button>
+        <Button variant="skyBlue">Shop Now</Button>
+        <Button variant="whiteLong">Shop Now</Button>
+        <Button variant="whiteSmall">Shop Now</Button>
+        <Button variant="lightGray">Shop Now</Button>
+        <Button variant="lightNavy">Shop Now</Button>
+        <Button variant="outlinedWhite">Shop Now</Button>
+        <Button variant="whiteDefault">Shop Now</Button>
+        <Button variant="outlinedBlue">Shop Now</Button>
+        <Button variant="brilliantWhite">Shop Now</Button>
+        <Button variant="navy">Shop Now</Button>
       </div>
       <div className="mt-4 mb-16 p-6">
         <OuterCard />

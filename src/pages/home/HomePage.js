@@ -110,7 +110,6 @@ const HomePage = (props) => {
         <InnerProductCard />
       </div>
     </div>
-    //
   );
 };
 

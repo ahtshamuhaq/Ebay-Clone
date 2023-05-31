@@ -11,7 +11,7 @@ import gpay from "./../../pictures/gpay.jpg";
 import mastercard from "./../../pictures/mastercard.jpg";
 import visa from "./../../pictures/visa.jpg";
 import amex from "./../../pictures/amex.jpg";
-import Button from "./Button";
+import { Button } from "./Index";
 
 const InnerProductCard = () => {
   const images = [Inner1, Inner2, Inner3, Inner4, Inner5, Inner6, Inner7];
@@ -82,11 +82,15 @@ const InnerProductCard = () => {
           <div
             className="w-11 mt-2 h-11 border border-black mr-2 overflow-hidden"
             key={index}
-            onMouseEnter={() => handleMouseEnter(imageSrc, index)}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onClick={() => handleClick(index)}
             onMouseLeave={handleMouseLeave}
-            onClick={() => handleClick(imageSrc, index)}
           >
-            <img src={imageSrc} alt="Iage" className="hover:cursor-pointer" />
+            <img
+              src={imageSrc}
+              alt={`Iage ${index + 1}`}
+              className="hover:cursor-pointer"
+            />
           </div>
         ))}
       </div>
@@ -200,15 +204,9 @@ const InnerProductCard = () => {
                   </h1>
                 </div>
                 <div className="flex flex-col ">
-                  <Button className="mt-3 " variant="darkCyan">
-                    {item.buttonText1}
-                  </Button>
-                  <Button className="mt-3" variant="skyBlue">
-                    {item.buttonText2}
-                  </Button>
-                  <Button className="mt-3" variant="whiteLong">
-                    {item.buttonText3}
-                  </Button>
+                  <Button variant="darkCyan"> {item.buttonText1}</Button>
+                  <Button variant="skyBlue">{item.buttonText2}</Button>
+                  <Button variant="whiteLong">{item.buttonText3}</Button>
                 </div>
               </div>
             </div>

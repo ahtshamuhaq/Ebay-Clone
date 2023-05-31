@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import Button from "../common/Button";
+import Button from "./../common/Button";
 
 const Carousal = () => {
   const slides = [

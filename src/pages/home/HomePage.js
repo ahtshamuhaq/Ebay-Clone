@@ -1,15 +1,17 @@
 import React from "react";
-import HomeNav from "./../../Components/homeComponents/HomeNav";
-import HomeSearch from "./../../Components/homeComponents/HomeSearch";
-import CarousalNav from "./../../Components/homeComponents/CarousalNav";
-import Carousal from "./../../Components/homeComponents/Carousal";
-import CardsForSlider from "./../../Components/common/CardsForSlider";
-import PopularCategories from "./../../Components/common/PopularCategories";
-
-import OuterCard from "./../../Components/common/OuterCard";
-import InnerProductCard from "./../../Components/common/InnerProductCard";
-import Button from "../../Components/common/Button";
-
+import {
+  HomeNav,
+  Carousal,
+  CarousalNav,
+  HomeSearch,
+} from "./../../Components/homeComponents/Index";
+import {
+  Button,
+  CardsForSlider,
+  InnerProductCard,
+  PopularCategories,
+  OuterCard,
+} from "./../../Components/common/Index";
 const HomePage = (props) => {
   return (
     <div className="w-4/5 mx-auto pt-2">

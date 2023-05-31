@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ebaylg from "./../pictures/ebaylg.png";
+import ebaylg from "./../../pictures/ebaylg.png";
 import ReactSearchBox from "react-search-box";
-import { search } from "./Reusable-Components/ButtonStyle";
+import { search } from "./../../uiComponents/reUsableComponents/ButtonStyle";
 const HomeSearch = () => {
   const [isOpen, setIsOpen] = useState(false);
 

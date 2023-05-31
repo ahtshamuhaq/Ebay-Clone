@@ -1,10 +1,10 @@
 import React from "react";
-import HomeNav from "./HomeNav";
-import HomeSearch from "./HomeSearch";
-import CarousalNav from "./CarousalNav";
-import Carousal from "./Reusable-Components/Carousal";
-import CardsForSlider from "./Reusable-Components/CardsForSlider";
-import PopularCategories from "./Reusable-Components/PopularCategories";
+import HomeNav from "./../../uiComponents/homeComponents/HomeNav";
+import HomeSearch from "./../../uiComponents/homeComponents/HomeSearch";
+import CarousalNav from "./../../uiComponents/homeComponents/CarousalNav";
+import Carousal from "./../../uiComponents/homeComponents/Carousal";
+import CardsForSlider from "./../../uiComponents/reUsableComponents/CardsForSlider";
+import PopularCategories from "./../../uiComponents/reUsableComponents/PopularCategories";
 import {
   letsGo,
   shopNow,
@@ -23,9 +23,9 @@ import {
   moreTech,
   brandAsus,
   goToHomepage,
-} from "./Reusable-Components/ButtonStyle";
-import OuterCard from "./Reusable-Components/OuterCard";
-import InnerProductCard from "./Reusable-Components/InnerProductCard";
+} from "./../../uiComponents/reUsableComponents/ButtonStyle";
+import OuterCard from "./../../uiComponents/reUsableComponents/OuterCard";
+import InnerProductCard from "./../../uiComponents/reUsableComponents/InnerProductCard";
 
 const HomePage = (props) => {
   return (

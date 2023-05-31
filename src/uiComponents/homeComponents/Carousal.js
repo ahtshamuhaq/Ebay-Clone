@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "nuka-carousel";
-import { shopNow } from "./ButtonStyle";
-import { letsGo } from "./ButtonStyle";
+import { shopNow } from "./../../uiComponents/reUsableComponents/ButtonStyle";
+import { letsGo } from "./../../uiComponents/reUsableComponents/ButtonStyle";
 
 const Carousal = () => {
   const slides = [

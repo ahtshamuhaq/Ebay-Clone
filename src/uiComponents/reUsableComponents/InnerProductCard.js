@@ -17,7 +17,7 @@ const InnerProductCard = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState(0);
 
-  const handleMouseEnter = (imageSrc, index) => {
+  const handleMouseEnter = (index) => {
     setCurrentImageIndex(index);
   };
 
@@ -25,7 +25,7 @@ const InnerProductCard = () => {
     setCurrentImageIndex(previousImageIndex);
   };
 
-  const handleClick = (imageSrc, index) => {
+  const handleClick = (index) => {
     setCurrentImageIndex(index);
     setPreviousImageIndex(currentImageIndex);
   };
@@ -85,11 +85,7 @@ const InnerProductCard = () => {
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(imageSrc, index)}
           >
-            <img
-              src={imageSrc}
-              alt={`Iage ${index + 1}`}
-              className="hover:cursor-pointer"
-            />
+            <img src={imageSrc} alt="Iage" className="hover:cursor-pointer" />
           </div>
         ))}
       </div>
@@ -168,7 +164,7 @@ const InnerProductCard = () => {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-5 h-5 mt-1 ml-1 font-bold"
+                      className="w-5 h-5 mt-1 ml-1 font-bold"
                     >
                       <path
                         stroke-linecap="round"
@@ -228,7 +224,7 @@ const InnerProductCard = () => {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5 h-5 mt-1 ml-1 font-bold"
+                  className="w-5 h-5 mt-1 ml-1 font-bold"
                 >
                   <path
                     stroke-linecap="round"
@@ -245,7 +241,7 @@ const InnerProductCard = () => {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5 h-5 mt-1 ml-1 font-bold"
+                  className="w-5 h-5 mt-1 ml-1 font-bold"
                 >
                   <path
                     stroke-linecap="round"
@@ -262,7 +258,7 @@ const InnerProductCard = () => {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-5 h-5 mt-1 ml-1 font-bold"
+                  className="w-5 h-5 mt-1 ml-1 font-bold"
                 >
                   <path
                     stroke-linecap="round"

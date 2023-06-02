@@ -37,19 +37,18 @@ const InnerProductCard = ({
     }
   };
 
-  const product = [
-    {
-      image: outerCard1,
-      description: " 500 Enflame SIZE 11.5",
-      gender: "WOMENS",
-      details: ["Brand ", "·ALIBABA adidas", "·  Yeezy"],
-      price: "3239.99",
-      buyIt: "Sale It Now",
-      shippingFee: "46.00 ",
-      origin: " AMERICAN States",
-      watchers: "1",
-    },
-  ];
+  const product = {
+    image: outerCard1,
+    description: " 500 Enflame SIZE 11.5",
+    gender: "WOMENS",
+    details: ["Brand ", "·ALIBABA adidas", "·  Yeezy"],
+    price: "3239.99",
+    buyIt: "Sale It Now",
+    shippingFee: "46.00 ",
+    origin: " AMERICAN States",
+    watchers: "1",
+  };
+
   return (
     <div>
       <div className="flex justify-between w-full">
@@ -291,7 +290,7 @@ const InnerProductCard = ({
       </div>
 
       <div className="mt-5 mb-5">
-        <OuterCard data={product} />
+        <OuterCard product={product} />
       </div>
     </div>
   );

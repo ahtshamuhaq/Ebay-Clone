@@ -4,14 +4,13 @@ import {
   Carousal,
   CarousalNav,
   HomeSearch,
-} from "./../../Components/homeComponents/Index";
-import {
   Button,
   CardsForSlider,
   InnerProductCard,
   PopularCategories,
   OuterCard,
-} from "./../../Components/common/Index";
+} from "./../../Components";
+
 import outerCard1 from "./../../pictures/outerCard1.png";
 import amex from "./../../pictures/amex.jpg";
 import gpay from "./../../pictures/gpay.jpg";
@@ -29,6 +28,7 @@ import Outer2 from "./../../pictures/Outer2.png";
 import Outer2b from "./../../pictures/Outer2b.png";
 import Outer2c from "./../../pictures/Outer2c.png";
 import Outer2d from "./../../pictures/Outer2d.png";
+
 const HomePage = (props) => {
   const data = [
     {
@@ -54,19 +54,18 @@ const HomePage = (props) => {
       buttonText: "Place a bid ",
     },
   ];
-  const product = [
-    {
-      image: outerCard1,
-      description: "Adidas Yeezy 500 Enflame SIZE 11.5",
-      gender: "MENS",
-      details: ["Brand New", "· adidas", "· adidas Yeezy"],
-      price: "329.99",
-      buyIt: "Buy It Now",
-      shippingFee: "46.00",
-      origin: "United States",
-      watchers: "12",
-    },
-  ];
+  const product = {
+    image: outerCard1,
+    description: "Adidas Yeezy 500 Enflame SIZE 11.5",
+    gender: "MENS",
+    details: ["Brand New", "· adidas", "· adidas Yeezy"],
+    price: "329.99",
+    buyIt: "Buy It Now",
+    shippingFee: "46.00",
+    origin: "United States",
+    watchers: "12",
+  };
+
   const data2 = [
     {
       OriginalPrice: "GBP 180.00",
@@ -157,7 +156,7 @@ const HomePage = (props) => {
         <Button variant="navy">Shop Now</Button>
       </div>
       <div className="mt-4 mb-16 p-6">
-        <OuterCard data={product} />
+        <OuterCard product={product} />
       </div>
       <div className="mt-4 mb-16 p-6">
         <InnerProductCard

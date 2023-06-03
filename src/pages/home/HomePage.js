@@ -28,32 +28,55 @@ import Outer2 from "./../../pictures/Outer2.png";
 import Outer2b from "./../../pictures/Outer2b.png";
 import Outer2c from "./../../pictures/Outer2c.png";
 import Outer2d from "./../../pictures/Outer2d.png";
+import Footer from "../../Components/common/Footer";
+import CarousalSlide from "../../Components/common/CarousalSlide";
 
 const HomePage = (props) => {
-  const data = [
-    {
-      title: " Adidas Yeezy 500 ash grey UK9.5",
-      condition: "New with box",
-      timeLeft: "5d 8h|Sunday, 11:58 PM",
-      startingBid: "GBP 126.00",
-      numOfBids: "0 ",
-      usPrice: "Approximately US $155.65",
-      reserveMet: "Reserve not met",
-      buttonText: "Place bid",
-    },
-  ];
-  const data3 = [
-    {
-      title: " Size UK 8.5 - adidas Yeezy 500 Super Moon Yellow",
-      condition: "New with box",
-      timeLeft: "",
-      startingBid: "",
-      numOfBids: "",
-      usPrice: "",
-      reserveMet: "",
-      buttonText: "Place a bid ",
-    },
-  ];
+  const data = {
+    title: " Adidas Yeezy 500 ash grey UK9.5",
+    condition: "New with box",
+    timeLeft: "5d 8h|Sunday, 11:58 PM",
+    startingBid: "GBP 126.00",
+    numOfBids: "0 ",
+    usPrice: "Approximately US $155.65",
+    reserveMet: "Reserve not met",
+    buttonText: "Place bid",
+
+    OriginalPrice: "GBP 180.00",
+    UsPrice: " $222.35",
+    buttonText1: "Buy It Now",
+    buttonText2: "Add to cart",
+    buttonText3: "Add to watchlist",
+    shipping: "  59.10 (approx US $73.01) ",
+    location: "  Sidcup , United Kingdom",
+    importCharges: "£126.03 ",
+    delivery: "  Tue, Jun 13 and Fri, Jun 16 to 46000 ",
+    returns: " Seller does not accept returns.",
+    paymentMethod: [paypal, gpay, visa, mastercard, amex],
+  };
+
+  const data2 = {
+    title: " Size UK 8.5 - adidas Yeezy 500 Super Moon Yellow",
+    condition: "New with box",
+    timeLeft: "",
+    startingBid: "",
+    numOfBids: "",
+    usPrice: "",
+    reserveMet: "",
+    buttonText: "Place a bid ",
+    OriginalPrice: "GBP 175.00",
+    UsPrice: "$216.90",
+    buttonText1: "Take Now",
+    buttonText2: "HELLO cart",
+    buttonText3: "sEE watchlist",
+    shipping: "GBP 15.00 (approx US $18.59) ",
+    location: "  cheltenham, Gloucestershire, United Kingdom",
+    importCharges: "  £126.03",
+    delivery: "  Tue, Jun 6 and Sat, Jun 10 to 46000        ",
+    returns: " 30 days returns. Buyer pays for return shipping. ",
+    paymentMethod: [paypal, gpay, visa, mastercard, amex],
+  };
+
   const product = {
     image: outerCard1,
     description: "Adidas Yeezy 500 Enflame SIZE 11.5",
@@ -66,48 +89,8 @@ const HomePage = (props) => {
     watchers: "12",
   };
 
-  const data2 = [
-    {
-      OriginalPrice: "GBP 180.00",
-      usPrice: " $222.35",
-      buttonText1: "Buy It Now",
-      buttonText2: "Add to cart",
-      buttonText3: "Add to watchlist",
-    },
-  ];
-  const data4 = [
-    {
-      OriginalPrice: "GBP 175.00",
-      usPrice: "$216.90",
-      buttonText1: "Take Now",
-      buttonText2: "HELLO cart",
-      buttonText3: "sEE watchlist",
-    },
-  ];
-  const deliveryMethod = [
-    {
-      shipping:
-        " GBP 59.10 (approx US $73.01) Expedited Shipping to Pakistan via eBay's Global Shipping Program. ",
-      location: "  Sidcup , United Kingdom",
-      importCharges: " Est. £126.03 Amount confirmed at checkout",
-      delivery:
-        " Estimated between Tue, Jun 13 and Fri, Jun 16 to 46000 Includes international tracking",
-      returns: " Seller does not accept returns. See details- ",
-      paymentMethod: [paypal, gpay, visa, mastercard, amex],
-    },
-  ];
-  const deliveryMethod2 = [
-    {
-      shipping:
-        "GBP 15.00 (approx US $18.59) Royal Mail International Tracked. ",
-      location: "  cheltenham, Gloucestershire, United Kingdom",
-      importCharges: " Est. £126.03 Amount confirmed at checkout",
-      delivery:
-        " Estimated between Tue, Jun 6 and Sat, Jun 10 to 46000        ",
-      returns: " 30 days returns. Buyer pays for return shipping. ",
-      paymentMethod: [paypal, gpay, visa, mastercard, amex],
-    },
-  ];
+  const deliveryMethod = [{}];
+  const deliveryMethod2 = [{}];
   const images = [Inner1, Inner2, Inner3, Inner4, Inner5, Inner6, Inner7];
   const images2 = [Outer2, Outer2b, Outer2c, Outer2d];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -125,7 +108,7 @@ const HomePage = (props) => {
       <div className="mt-4">
         <CarousalNav />
       </div>
-      <div className="mt-4">
+      <div className="mt-2">
         <Carousal />
       </div>
       <div className="mt-4">
@@ -161,7 +144,6 @@ const HomePage = (props) => {
       <div className="mt-4 mb-16 p-6">
         <InnerProductCard
           data={data}
-          data2={data2}
           deliveryMethod={deliveryMethod}
           images={images}
           currentImageIndex={currentImageIndex}
@@ -170,17 +152,22 @@ const HomePage = (props) => {
           setPreviousImageIndex={setPreviousImageIndex}
         />
       </div>
-      <div className="w-full h-12 bg-red-700 mb-12"></div>
-      <InnerProductCard
-        data={data3}
-        data2={data4}
-        deliveryMethod={deliveryMethod2}
-        images={images2}
-        currentImageIndex={currentImageIndex}
-        setCurrentImageIndex={setCurrentImageIndex}
-        previousImageIndex={previousImageIndex}
-        setPreviousImageIndex={setPreviousImageIndex}
-      />
+
+      <div>
+        <InnerProductCard
+          data={data2}
+          deliveryMethod={deliveryMethod2}
+          images={images2}
+          currentImageIndex={currentImageIndex}
+          setCurrentImageIndex={setCurrentImageIndex}
+          previousImageIndex={previousImageIndex}
+          setPreviousImageIndex={setPreviousImageIndex}
+        />
+      </div>
+      <div>
+        <CarousalSlide />
+      </div>
+      <Footer />
     </div>
   );
 };

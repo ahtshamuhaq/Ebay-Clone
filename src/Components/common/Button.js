@@ -3,9 +3,9 @@ import React from "react";
 const Button = ({ variant, children, ...rest }) => {
   const buttonStyles =
     variant === "transparent"
-      ? "bg-transparent rounded py-2 px-4 border border-black mb-1"
+      ? "bg-transparent rounded py-2 px-4 border border-black mb-1 flex justify-between items-center mt-2"
       : variant === "errorText"
-      ? "px-4 py-2 rounded bg-transparent text-[#ff0000]  border border-black mb-1 "
+      ? " flex justify-between px-4 py-2 rounded bg-transparent text-[#ff0000]  border border-black items-center mt-2 mb-1 "
       : variant === "searchBox"
       ? "bg-[#3665f3] text-white ml-1 rounded px-4 py-2 mb-1"
       : variant === "redWhite"

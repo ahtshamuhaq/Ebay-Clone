@@ -5,10 +5,10 @@ import {
   CarousalNav,
   HomeSearch,
   Button,
-  CardsForSlider,
   InnerProductCard,
   PopularCategories,
   OuterCard,
+  CardCarousal,
 } from "./../../Components";
 
 import outerCard1 from "./../../pictures/outerCard1.png";
@@ -112,9 +112,9 @@ const HomePage = (props) => {
         <Carousal />
       </div>
       <div className="mt-4">
-        <CardsForSlider />
+        <CardCarousal />
       </div>
-      <div className="mt-4">
+      {/* <div className="mt-4">
         <PopularCategories />
       </div>
       <div className="mt-4 mb-16 p-6 bg-[#E62048] flex flex-wrap justify-between ">
@@ -163,8 +163,8 @@ const HomePage = (props) => {
           previousImageIndex={previousImageIndex}
           setPreviousImageIndex={setPreviousImageIndex}
         />
-      </div>
-      <div>
+      </div> */}
+      <div className="mt-8 mb-8">
         <CarousalSlide />
       </div>
       <Footer />

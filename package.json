@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "carousel-react-rcdev": "^0.0.5",
     "embla-carousel-react": "^8.0.0-rc05",
+    "flickity": "^3.0.0",
     "flowbite": "^1.6.5",
     "nuka-carousel": "^6.0.3",
     "react": "^18.2.0",
@@ -22,6 +23,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.11",
+    "tailwind-scrollbar": "^3.0.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

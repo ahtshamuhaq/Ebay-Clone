@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import CardsForSlider from "./CardsForSlider";
 import fishfinder1 from "./../../pictures/fishfinder1.png";
 import fishfinder2 from "./../../pictures/fishfinder2.png";
@@ -200,21 +200,83 @@ const CardCarousal = () => {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState([0, 0, 0]);
+  const sliderRefs = useRef([null, null, null]);
+
+  const handlePrevious = (sliderIndex) => {
+    if (currentIndex[sliderIndex] > 0) {
+      setCurrentIndex((prevIndexes) => {
+        const newIndexes = [...prevIndexes];
+        newIndexes[sliderIndex] -= 1;
+        return newIndexes;
+      });
+      scrollSlider(sliderIndex, -sliderRefs.current[sliderIndex].offsetWidth);
+    }
+  };
+
+  const handleNext = (sliderIndex) => {
+    const cardDataArray = [cardData, card2Data, card3Data];
+    if (currentIndex[sliderIndex] < cardDataArray[sliderIndex].length - 1) {
+      setCurrentIndex((prevIndexes) => {
+        const newIndexes = [...prevIndexes];
+        newIndexes[sliderIndex] += 1;
+        return newIndexes;
+      });
+      scrollSlider(sliderIndex, sliderRefs.current[sliderIndex].offsetWidth);
+    }
+  };
+
+  const scrollSlider = (sliderIndex, scrollAmount) => {
+    sliderRefs.current[sliderIndex].scrollTo({
+      left: sliderRefs.current[sliderIndex].scrollLeft + scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <div className="flex  font-semibold text-3xl mt-12 mb-5">
         <h1 className="hover:underline">Your Recently Viewed Items</h1>
       </div>
-      <div className="flex overflow-x-auto scrollbar-hide">
-        {cardData.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-64 p-4">
-            <CardsForSlider data={card} />
-          </div>
-        ))}
+      <div className="flex">
+        <button
+          onClick={() => handlePrevious(0)}
+          disabled={currentIndex[0] === 0}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_left
+          </i>
+        </button>
+        <div
+          className="flex overflow-x-auto scrollbar-hide hover:scrollbar-visible"
+          ref={(ref) => (sliderRefs.current[0] = ref)}
+        >
+          {cardData.map((card, index) => (
+            <div
+              key={index}
+              className={`flex-shrink-0 w-64 p-4 ${
+                index === currentIndex[0] ? "active" : ""
+              }`}
+            >
+              <CardsForSlider data={card} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handleNext(0)}
+          disabled={currentIndex[0] === cardData.length - 1}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_right
+          </i>
+        </button>
       </div>
       <div className="flex  font-semibold text-3xl mt-12 mb-5">
-        <h1 className="hover:underline">adidas Yeezy 500 Athletic Shoes</h1>
-        <h1 className="hover:underline ml-20 flex justify-between ">
+        <h1 className="hover:underline border-r-2 pr-6 border-[#bcbcbc]">
+          adidas Yeezy 500 Athletic Shoes
+        </h1>
+        <h1 className="hover:underline ml-10 flex justify-between ">
           See all{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -232,16 +294,45 @@ const CardCarousal = () => {
           </svg>
         </h1>
       </div>
-      <div className="flex overflow-x-auto scrollbar-hide">
-        {card2Data.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-64 p-4">
-            <CardsForSlider data={card} />
-          </div>
-        ))}
+      <div className="flex">
+        <button
+          onClick={() => handlePrevious(1)}
+          disabled={currentIndex[1] === 0}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_left
+          </i>
+        </button>
+        <div
+          className="flex overflow-x-auto scrollbar-hide mt-8"
+          ref={(ref) => (sliderRefs.current[1] = ref)}
+        >
+          {card2Data.map((card, index) => (
+            <div
+              key={index}
+              className={`flex-shrink-0 w-64 p-4 ${
+                index === currentIndex[1] ? "active" : ""
+              }`}
+            >
+              <CardsForSlider data={card} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handleNext(1)}
+          disabled={currentIndex[1] === card2Data.length - 1}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_right
+          </i>
+        </button>
       </div>
       <div className="flex  font-semibold text-3xl mt-12 mb-5">
-        <h1 className="hover:underline">Deals</h1>
-        <h1 className="hover:underline ml-12 flex justify-between ">
+        <h1 className="hover:underline border-r-2 w-24 border-[#bcbcbc]">
+          Deals
+        </h1>
+        <h1 className="hover:underline ml-6  flex justify-between ">
           See all{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -259,12 +350,39 @@ const CardCarousal = () => {
           </svg>
         </h1>
       </div>
-      <div className="flex overflow-x-auto mt-8 scrollbar-hide">
-        {card3Data.map((card, index) => (
-          <div key={index} className="flex-shrink-0 w-64 p-4">
-            <CardsForSlider data={card} />
-          </div>
-        ))}
+      <div className="flex">
+        <button
+          onClick={() => handlePrevious(2)}
+          disabled={currentIndex[2] === 0}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_left
+          </i>
+        </button>
+        <div
+          className="flex overflow-x-auto scrollbar-hide mt-8"
+          ref={(ref) => (sliderRefs.current[2] = ref)}
+        >
+          {card3Data.map((card, index) => (
+            <div
+              key={index}
+              className={`flex-shrink-0 w-64 p-4 ${
+                index === currentIndex[2] ? "active" : ""
+              }`}
+            >
+              <CardsForSlider data={card} />
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handleNext(2)}
+          disabled={currentIndex[2] === card3Data.length - 1}
+        >
+          <i class="material-icons" style={{ fontSize: "36px" }}>
+            keyboard_arrow_right
+          </i>
+        </button>
       </div>
     </div>
   );

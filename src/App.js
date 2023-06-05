@@ -15,7 +15,7 @@ function App() {
     "Messages",
   ];
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HomePage listItems={listItems} />
     </div>
   );

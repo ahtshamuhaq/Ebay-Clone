@@ -7,7 +7,7 @@ const Button = ({ variant, children, ...rest }) => {
       : variant === "errorText"
       ? " flex justify-between px-4 py-2 rounded bg-transparent text-[#ff0000]  border border-black items-center mt-2 mb-1 transition-colors duration-300 "
       : variant === "searchBox"
-      ? "bg-[#3665f3] text-white ml-1 transition-colors duration-300 rounded px-4 py-2 mb-1"
+      ? "bg-[#3665f3] text-white ml-1 transition-colors duration-300 rounded px-20 py-3 mb-1"
       : variant === "redWhite"
       ? "bg-white text-[#E62048] ml-1 transition-colors duration-300 rounded-3xl py-3 px-4 font-bold mb-1"
       : variant === "blueSmall"

@@ -5,7 +5,7 @@ const CarousalNavDropdowns = ({ dropdownData, isOpen }) => {
     <div className="dropdown">
       {console.log(dropdownData)}
       {isOpen && (
-        <div className="dropdown-content flex justify-between z-30 absolute w-[1220px] h-[300px] left-[150px] bg-white">
+        <div className="dropdown-content flex justify-between z-30 absolute w-[1220px] h-[300px] left-[120px] bg-white">
           <div className=" mt-4">
             <h1 className="font-bold mb-3 mt-1">{dropdownData.heading1}</h1>
             {dropdownData.paragraphs1.map((paragraph, index) => (

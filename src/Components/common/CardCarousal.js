@@ -248,7 +248,7 @@ const CardCarousal = () => {
           </i>
         </button>
         <div
-          className="flex overflow-x-auto scrollbar-hide hover:scrollbar-visible"
+          className="flex overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-300"
           ref={(ref) => (sliderRefs.current[0] = ref)}
         >
           {cardData.map((card, index) => (
@@ -304,7 +304,7 @@ const CardCarousal = () => {
           </i>
         </button>
         <div
-          className="flex overflow-x-auto scrollbar-hide mt-8"
+          className="flex overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-300 mt-8"
           ref={(ref) => (sliderRefs.current[1] = ref)}
         >
           {card2Data.map((card, index) => (
@@ -360,7 +360,7 @@ const CardCarousal = () => {
           </i>
         </button>
         <div
-          className="flex overflow-x-auto scrollbar-hide mt-8"
+          className="flex  overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-300 mt-8"
           ref={(ref) => (sliderRefs.current[2] = ref)}
         >
           {card3Data.map((card, index) => (

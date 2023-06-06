@@ -1,5 +1,6 @@
 import "./App.css";
 import HomePage from "./pages/home/HomePage";
+import ebay from "./pictures/ebaylg.png";
 
 function App() {
   const listItems = [
@@ -14,9 +15,10 @@ function App() {
     "Saved Sellers",
     "Messages",
   ];
+  const lg = ebay;
   return (
-    <div className="overflow-hidden">
-      <HomePage listItems={listItems} />
+    <div>
+      <HomePage listItems={listItems} lg={lg} />
     </div>
   );
 }

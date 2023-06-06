@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Carousel from "nuka-carousel";
 import Button from "./../common/Button";
-
+{
+  /* <div className="w-20 h-10  sm:hidden">
+<img src={props.lg} alt="" />
+</div> */
+}
 const Carousal = () => {
   const slides = [
     {
@@ -74,7 +78,7 @@ const Carousal = () => {
             </div>
           ))}
         </Carousel>
-        <div className="w-full flex absolute -mt-20 ml-[550px] ">
+        <div className="right-0 mr-2 flex absolute -mt-20 ml-[550px] ">
           <button
             className="mx-auto  bg-[#011a28] text-white rounded-full p-2 mt-3"
             onClick={toggleAutoplay}

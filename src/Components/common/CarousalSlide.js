@@ -12,7 +12,7 @@ const CarousalSlide = () => {
     variant: "transparent",
   };
   return (
-    <div>
+    <div className="hidden sm:w-4/5 sm:block md:w-4/5 md:block ">
       {" "}
       <div
         className="flex justify-between w-full"

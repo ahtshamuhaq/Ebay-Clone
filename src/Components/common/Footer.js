@@ -43,9 +43,9 @@ const YourComponent = () => {
   ];
 
   return (
-    <div>
+    <div className="">
       <hr />
-      <div className="flex justify-between mt-4 mb-4">
+      <div className="hidden  lg:flex justify-between mt-4 mb-4 w-[90%] mx-auto">
         {columns.map((column, index) => (
           <div key={index}>
             <h1 className="text-[#7c7976] font-bold">{column.title}</h1>
@@ -90,7 +90,30 @@ const YourComponent = () => {
           </div>
         ))}
       </div>
-      <p className="mb-8 mt-6 flex items-center">
+      <div className="bg-[#111820] text-white font-semibold pb-5 lg:hidden ">
+        <ul className=" p-3 pt-8 pl-5 mb-4 w-[95%]  ">
+          <li className="mb-2">Home</li>
+          <li className="mb-2">Sign in / Register</li>
+          <li className="mb-2">Sell an item</li>
+          <li className="mb-2">Help & Contact</li>
+          <li className="mb-8">Download the free eBay app</li>
+          <hr />
+        </ul>
+        <div className="flex flex-col items-center">
+          <div>
+            <span className="underline mr-2">Site map,</span>
+            <span className="underline mr-2">User Agreement,</span>
+            <span className="underline mr-2">Privacy,</span>
+            <span className="underline mr-2">Cookies &</span>
+            <span className="underline mr-2">AdChoice.</span>
+          </div>
+          <div>© 1995-2023 eBay Inc.</div>
+          <div className="mb-12">
+            Mobile / <span className="underline">Classic Site</span>
+          </div>
+        </div>
+      </div>
+      <p className="mb-8 mt-6  w-full hidden  lg:flex items-center">
         Copyright © 1995-2023 eBay Inc. All Rights Reserved.
         <span className="underline ml-2 text-sm">Accessibility</span>,
         <span className="underline ml-2 text-sm">Privacy</span>,
@@ -99,20 +122,6 @@ const YourComponent = () => {
         <span className="underline ml-2 text-sm">Payments Terms of Use</span>,
         <span className="underline ml-2 text-sm">User Agreement</span> and{" "}
         <span className="underline ml-2 text-sm">AdChoice</span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="w-5 h-5 mt-1 ml-1 font-bold"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-          />
-        </svg>
       </p>
     </div>
   );

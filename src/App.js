@@ -1,5 +1,6 @@
 import "./App.css";
 import HomePage from "./pages/home/HomePage";
+import ProductPage from "./pages/home/ProductPage";
 import ebay from "./pictures/ebaylg.png";
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
   const lg = ebay;
   return (
     <div>
-      <HomePage listItems={listItems} lg={lg} />
+      {/* <HomePage listItems={listItems} lg={lg} /> */}
+      <ProductPage />
     </div>
   );
 }

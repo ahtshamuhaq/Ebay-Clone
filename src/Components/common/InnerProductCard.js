@@ -1,6 +1,11 @@
 import React from "react";
 import outerCard1 from "./../../pictures/outerCard1.png";
-import { Button, OuterCard } from "./Index";
+import { Button } from "./Index";
+import detailIcon from "./../../pictures/Screenshot 2023-06-08 083718.jpg";
+import sp1 from "./../../pictures/sponsor1.jpg";
+import sp2 from "./../../pictures/sponsor2.jpg";
+import sp3 from "./../../pictures/sponsor3.jpg";
+import sp4 from "./../../pictures/sponsor4.jpg";
 
 const InnerProductCard = ({
   data,
@@ -282,10 +287,75 @@ const InnerProductCard = ({
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="mt-5 mb-5">
-        <OuterCard product={product} />
+        <div>
+          <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+            <h1 className="font-semibold">Shop with confidence</h1>
+            <div className="flex justify-between  items-center">
+              <img className="w-[25px] h-[25px]" src={detailIcon} alt="" />
+              <p className="ml-3">
+                <span className="font-bold">eBay Money Back Guarantee</span>
+                <br />
+                <span>Get the item you ordered or your money back.</span>
+                <br />
+                <span className=" text-[#3880df] underline">Learn More</span>
+              </p>
+            </div>
+          </div>
+          <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+            <span className="font-bold">Seller Information</span>
+            <br />
+            <span className="flex  text-[#3880df] underline">
+              jaminahat (430{" "}
+              <i
+                style={{ color: "green", textDecoration: "none" }}
+                className="material-icons"
+              >
+                star
+              </i>
+              )
+            </span>
+            <span className="text-sm">100% positive feedback</span>
+            <br />
+            <span>
+              ................................................................................
+            </span>
+            <br />
+            <span className="flex items-center  text-[#3880df] ">
+              {" "}
+              <i className="fa fa-heart-o  mr-2 mt-1"></i> Save seller
+            </span>
+            <span className=" text-[#3880df] underline">Contact seller</span>
+            <br />
+            <span className=" text-[#3880df] underline">See other items</span>
+            <br />
+          </div>
+          <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-3 rounded-2xl ">
+            <h1 className="font-bold">Shop related items</h1>
+            <span className="flex  text-[#3880df]">
+              Shop now <i class="material-icons">arrow_forward</i>
+            </span>
+            <div className="flex justify-between">
+              <img className="w-[84px] h-[84px]" src={sp1} alt="" />
+              <img className="w-[84px] h-[84px]" src={sp2} alt="" />
+              <img className="w-[84px] h-[84px]" src={sp3} alt="" />
+            </div>
+            <div className="flex items-center">
+              <div>
+                <img className="w-11 h-11" src={sp4} alt="" />
+              </div>
+              <div className="ml-1">
+                <h1 className="font-bold">OnlineShoesStore</h1>
+                <div className="flex justify-between ">
+                  <p>
+                    <span className="font-bold">140K </span>
+                    <span className="text-[#848f94]"> items sold</span>
+                  </p>
+                  <p className="text-[#848f94] ml-6">Sponsored</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

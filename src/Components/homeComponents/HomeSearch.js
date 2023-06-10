@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ebaylg from "./../../pictures/ebaylg.png";
 import ReactSearchBox from "react-search-box";
 import Button from "../common/Button";
-const HomeSearch = () => {
+const HomeSearch = ({ variant }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -116,7 +116,7 @@ const HomeSearch = () => {
     { value: "", label: "Everything Else" },
   ];
   return (
-    <div className="flex mx-auto items-center w-[80%] `">
+    <div className="flex mx-auto items-center w-[90%] `">
       <div className=" hidden lg:block w-36">
         <img src={ebaylg} alt="" />
       </div>
@@ -210,7 +210,7 @@ const HomeSearch = () => {
         </div>
       </div>
       <div className="hidden md:block">
-        <Button variant="searchBox">Search</Button>
+        <Button variant="outlinedBlue">Search</Button>
       </div>
       <div className="hidden md:block">
         <a className="text-[#767676] text-xs ml-2" href="/">

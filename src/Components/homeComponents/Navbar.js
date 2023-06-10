@@ -32,7 +32,7 @@ const Navbar = ({ listItems }) => {
   };
 
   return (
-    <div className="mx-auto text-xs w-full md:w-3/4">
+    <div className="mx-auto text-xs w-full md:w-[90%]">
       <nav className="bg-white border-gray-200 w-full dark:bg-gray-900 ">
         <div className=" flex flex-wrap items-center justify-between md:items-center mx-auto p-4">
           <div>

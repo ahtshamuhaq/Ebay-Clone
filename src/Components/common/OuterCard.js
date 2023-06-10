@@ -3,8 +3,12 @@ const OuterCard = ({ product }) => {
   return (
     <div>
       {product.image && (
-        <div className="">
-          <img src={product.image} alt="Product" />
+        <div className="W-[258px] h-[200px] flex items-center justify-center bg-[#f2f2f2]">
+          <img
+            className="W-[258px] h-[200px]"
+            src={product.image}
+            alt="Product"
+          />
         </div>
       )}
       {product.description && (

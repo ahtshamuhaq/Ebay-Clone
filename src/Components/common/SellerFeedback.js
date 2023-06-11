@@ -16,7 +16,7 @@ const SellerFeedback = () => {
           </div>
         </div>
         <div className="flex flex-col w-fit mt-3">
-          <Button variant="blueSmall">Hello</Button>
+          <Button variant="blueSmall">Visit Shop</Button>
           <Button variant="outlinedBlue">Contact</Button>
           <Button variant="outlinedBlue">
             <i class="fa fa-heart-o mr-2"></i>
@@ -29,7 +29,6 @@ const SellerFeedback = () => {
           <h1 className="font-bold text-2xl">Detailed seller ratings</h1>
           <p className="text-gray-500">Average for the last 12 months</p>
         </div>
-        <div></div>
       </div>
     </div>
   );

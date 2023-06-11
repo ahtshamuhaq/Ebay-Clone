@@ -210,7 +210,7 @@ const HomeSearch = ({ variant }) => {
         </div>
       </div>
       <div className="hidden md:block">
-        <Button variant="outlinedBlue">Search</Button>
+        <Button variant="searchBox">Search</Button>
       </div>
       <div className="hidden md:block">
         <a className="text-[#767676] text-xs ml-2" href="/">

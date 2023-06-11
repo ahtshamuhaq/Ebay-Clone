@@ -37,6 +37,9 @@ import InnerSec10 from "./../../pictures/innercard(carousal2)11.jpg";
 import InnerSec11 from "./../../pictures/innercard(carousal2)12.jpg";
 import InnerProductDescription from "../../Components/common/InnerProductDescription";
 import SellerFeedback from "../../Components/common/SellerFeedback";
+import Ratings from "../../Components/common/Ratings";
+import CardGrid from "../../Components/common/CardGrid";
+import Footer from "../../Components/common/Footer";
 const ProductPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState(0);
@@ -321,6 +324,30 @@ const ProductPage = () => {
       </div>
       <div className="w-[90%] mt-6 mb-12 mx-auto bg-[#f8f8f8] p-2">
         <SellerFeedback />
+      </div>
+      <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
+        <InnerCardCarousal cardData={cardData} />{" "}
+      </div>
+      <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
+        <Ratings />
+      </div>
+
+      <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
+        <InnerCardCarousal cardData={card2Data} />{" "}
+      </div>
+      <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
+        <InnerCardCarousal cardData={card2Data} />{" "}
+      </div>
+      <div className="w-[95%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
+        <CardGrid />
+      </div>
+      <hr />
+      <div className="w-[90%] mt-6 mb-12 mx-auto  p-2">
+        <Route />
+      </div>
+      <hr />
+      <div className="w-[90%] mt-6 mb-12 mx-auto  p-2">
+        <Footer />
       </div>
     </div>
   );

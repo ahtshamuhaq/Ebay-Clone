@@ -1,4 +1,6 @@
 import "./App.css";
+import AddCart from "./pages/home/AddCart";
+import HelpAndContact from "./pages/home/HelpAndContact";
 import HomePage from "./pages/home/HomePage";
 import ProductPage from "./pages/home/ProductPage";
 import ebay from "./pictures/ebaylg.png";
@@ -20,7 +22,9 @@ function App() {
   return (
     <div>
       {/* <HomePage listItems={listItems} lg={lg} /> */}
-      <ProductPage />
+      {/* <ProductPage /> */}
+      {/* <AddCart /> */}
+      <HelpAndContact />
     </div>
   );
 }

@@ -12,10 +12,10 @@ const CarousalSlide = () => {
     variant: "transparent",
   };
   return (
-    <div className="hidden sm:w-4/5 sm:block md:w-4/5 md:block ">
+    <div className="hidden sm:w-4/5 sm:block md:w-full md:block ">
       {" "}
       <div
-        className="flex justify-between w-full"
+        className="flex justify-between "
         style={{ backgroundColor: slide.bgColor }}
       >
         <div className=" flex flex-col  justify-start mt-8 pl-12">

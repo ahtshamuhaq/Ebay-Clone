@@ -1,4 +1,6 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import PrivacyChoices from "./pages/home/PrivacyChoices";
 import AddCart from "./pages/home/AddCart";
 import HelpAndContact from "./pages/home/HelpAndContact";
 import HomePage from "./pages/home/HomePage";
@@ -21,10 +23,14 @@ function App() {
   const lg = ebay;
   return (
     <div>
-      {/* <HomePage listItems={listItems} lg={lg} /> */}
-      {/* <ProductPage /> */}
-      {/* <AddCart /> */}
-      <HelpAndContact />
+      {/* <HomePage  /> */}
+      <Routes>
+        <Route path="/" element={<HomePage listItems={listItems} lg={lg} />} />
+        <Route path="/pages/home/ProductPage" element={<ProductPage />} />
+        <Route path="/pages/home/AddCart" element={<AddCart />} />
+        <Route path="/pages/home/HelpAndContact" element={<HelpAndContact />} />
+        <Route path="/pages/home/PrivacyChoices" element={<PrivacyChoices />} />
+      </Routes>
     </div>
   );
 }

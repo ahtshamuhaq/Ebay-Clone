@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ebay from "./../../pictures/ebaylg.png";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ listItems }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -44,7 +45,9 @@ const Navbar = ({ listItems }) => {
               />
 
               <div className="hidden md:flex">
-                <span>hi!</span>
+                <Link>
+                  <span>hi!</span>
+                </Link>
                 <span>
                   <a className="ml-1 text-[#3880df] underline" href="/">
                     Sign in
@@ -57,14 +60,14 @@ const Navbar = ({ listItems }) => {
                   </a>
                 </span>
                 <span>
-                  <a className="text-black ml-5 hover:underline" href="/">
-                    Daily Deals
-                  </a>
+                  <p className="text-black ml-5 hover:underline">Daily Deals</p>
                 </span>
                 <span>
-                  <a className="text-black ml-5 hover:underline" href="/">
-                    Help & Contact
-                  </a>
+                  <Link to={"/pages/home/HelpAndContact"}>
+                    <p className="text-black ml-5 hover:underline">
+                      Help & Contact
+                    </p>
+                  </Link>
                 </span>
               </div>
             </a>

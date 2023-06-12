@@ -322,7 +322,7 @@ const ProductPage = () => {
       <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
         <InnerProductDescription />
       </div>
-      <div className="w-[90%] mt-6 mb-12 mx-auto bg-[#f8f8f8] p-2">
+      <div className="w-full lg:w-[90%] mt-6 mb-12 mx-auto bg-[#f8f8f8] p-2">
         <SellerFeedback />
       </div>
       <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">

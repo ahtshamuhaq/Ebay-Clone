@@ -171,14 +171,14 @@ const Cart = () => {
           <span className="font-semibold underline">sign in.</span>
         </p>
       </div>
-      <div className="flex w-full">
-        <div className="mt-6  mx-auto w-[70%]">
+      <div className="flex w-full flex-wrap">
+        <div className="mt-6  mx-auto w-full md:w-[70%]">
           <div className="mt-6 mb-12 mx-auto border-2  border-[#ccc5c5] p-4">
             <h1 className="font-semibold text-2xl">
               Seller <span className="underline">{obj.Seller}</span>
             </h1>
             <div className="flex justify-between">
-              <div className="flex justify-between mt-8   w-1/3">
+              <div className="flex justify-between mt-8 w-1/2  sm:w-1/3">
                 <div className=":">
                   <img className="h-20 w-20" src={obj.image} alt="" />
                 </div>
@@ -193,20 +193,39 @@ const Cart = () => {
                   </h1>
                 </div>
               </div>
-              <div>Qty {obj.qty}</div>
-              <div className="text-2xl font-semibold">US${obj.price}</div>
+              <div className="hidden sm:block">Qty {obj.qty}</div>
+              <div className="text-2xl mt-8 font-semibold">
+                US${obj.price}
+                <div className="block mt-4 sm:hidden">Qty {obj.qty}</div>
+              </div>
             </div>
-            <div className="ml-auto w-full text-end">
+            <div className="ml-auto w-full flex justify-between  sm:text-end sm:block">
               <span className="text-[#406ff1] underline">Save for later</span>
               <span className="text-[#406ff1] underline ml-3 mr-4">Remove</span>
             </div>
           </div>
-
+          <div className="w-full block  border-2  border-[#ccc5c5] p-4 xl:hidden mt-4 h-fit">
+            <Button variant="blueSmall">Go To Checkout</Button>
+            <div className="flex justify-between mt-5">
+              <p>Item (1)</p>
+              <div className="text-lg font-semibold mb-5">US${obj.price}</div>
+            </div>
+            <hr />
+            <div className="flex justify-between mt-4">
+              <div className="text-lg font-semibold">Subtotal</div>
+              <div className="text-2xl font-semibold">US${obj.price}</div>
+            </div>
+            <div className="w-10 sm:w-14 flex mt-4 justify-between">
+              {obj.payments.map((payment, index) => (
+                <img key={index} src={payment} alt={`Payment ${index}`} />
+              ))}
+            </div>
+          </div>
           <div className=" mb-12  border-2 border-[#ccc5c5] p-2">
             <InnerCardCarousal cardData={cardData} />{" "}
           </div>
         </div>
-        <div className="w-1/4 border-2  border-[#ccc5c5] p-4 sticky top-0 mt-4 h-fit">
+        <div className="w-1/4 hidden xl:block border-2  border-[#ccc5c5] p-4 xl:sticky xl:top-0 mt-4 h-fit">
           <Button variant="blueSmall">Go To Checkout</Button>
           <div className="flex justify-between mt-5">
             <p>Item (1)</p>

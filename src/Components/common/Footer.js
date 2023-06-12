@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const YourComponent = () => {
+const Footer = () => {
   const columns = [
     {
       title: "Buy",
@@ -113,12 +114,14 @@ const YourComponent = () => {
           </div>
         </div>
       </div>
-      <p className="mb-8 mt-6  w-full hidden  lg:flex items-center">
+      <p className="mb-2 mt-6  w-full hidden  lg:flex items-center">
         Copyright © 1995-2023 eBay Inc. All Rights Reserved.
         <span className="underline ml-2 text-sm">Accessibility</span>,
         <span className="underline ml-2 text-sm">Privacy</span>,
         <span className="underline ml-2 text-sm">Cookies</span>,
-        <span className="underline ml-2 text-sm">Your Privacy Choices</span>,
+        <Link to={"/pages/home/PrivacyChoices"}>
+          <span className="underline ml-2 text-sm">Your Privacy Choices</span>,
+        </Link>
         <span className="underline ml-2 text-sm">Payments Terms of Use</span>,
         <span className="underline ml-2 text-sm">User Agreement</span> and{" "}
         <span className="underline ml-2 text-sm">AdChoice</span>
@@ -127,4 +130,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default Footer;

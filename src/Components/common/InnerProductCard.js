@@ -6,6 +6,7 @@ import sp1 from "./../../pictures/sponsor1.jpg";
 import sp2 from "./../../pictures/sponsor2.jpg";
 import sp3 from "./../../pictures/sponsor3.jpg";
 import sp4 from "./../../pictures/sponsor4.jpg";
+import { Link } from "react-router-dom";
 
 const InnerProductCard = ({
   data,
@@ -40,22 +41,10 @@ const InnerProductCard = ({
     }
   };
 
-  const product = {
-    image: outerCard1,
-    description: " 500 Enflame SIZE 11.5",
-    gender: "WOMENS",
-    details: ["Brand ", "·ALIBABA adidas", "·  Yeezy"],
-    price: "3239.99",
-    buyIt: "Sale It Now",
-    shippingFee: "46.00 ",
-    origin: " AMERICAN States",
-    watchers: "1",
-  };
-
   return (
     <div>
-      <div className="flex justify-between w-full">
-        <div className="flex flex-col mt-3">
+      <div className="flex flex-col md:flex-row justify-between w-full">
+        <div className="hidden xl:flex flex-col mt-3">
           {images.map((imageSrc, index) => (
             <div
               className="w-11 mt-2 h-11 border border-black mr-2 overflow-hidden"
@@ -80,7 +69,7 @@ const InnerProductCard = ({
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="  w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -107,7 +96,7 @@ const InnerProductCard = ({
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className=" w-6 h-6"
             >
               <path
                 strokeLinecap="round"
@@ -193,7 +182,9 @@ const InnerProductCard = ({
                       <Button variant="darkCyan">{data.buttonText1}</Button>
                     )}
                     {data.buttonText2 && (
-                      <Button variant="skyBlue">{data.buttonText2}</Button>
+                      <Link to={"/pages/home/AddCart"}>
+                        <Button variant="skyBlue">{data.buttonText2}</Button>
+                      </Link>
                     )}
                     {data.buttonText3 && (
                       <Button variant="whiteLong">{data.buttonText3}</Button>
@@ -287,7 +278,7 @@ const InnerProductCard = ({
             </div>
           </div>
         </div>
-        <div>
+        <div className="hidden xl:block">
           <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
             <h1 className="font-semibold">Shop with confidence</h1>
             <div className="flex justify-between  items-center">
@@ -352,6 +343,75 @@ const InnerProductCard = ({
                   </p>
                   <p className="text-[#848f94] ml-6">Sponsored</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-wrap mt-6 xl:hidden">
+        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+          <h1 className="font-semibold">Shop with confidence</h1>
+          <div className="flex justify-between  items-center">
+            <img className="w-[25px] h-[25px]" src={detailIcon} alt="" />
+            <p className="ml-3">
+              <span className="font-bold">eBay Money Back Guarantee</span>
+              <br />
+              <span>Get the item you ordered or your money back.</span>
+              <br />
+              <span className=" text-[#3880df] underline">Learn More</span>
+            </p>
+          </div>
+        </div>
+        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+          <span className="font-bold">Seller Information</span>
+          <br />
+          <span className="flex  text-[#3880df] underline">
+            jaminahat (430{" "}
+            <i
+              style={{ color: "green", textDecoration: "none" }}
+              className="material-icons"
+            >
+              star
+            </i>
+            )
+          </span>
+          <span className="text-sm">100% positive feedback</span>
+          <br />
+          <span>
+            ................................................................................
+          </span>
+          <br />
+          <span className="flex items-center  text-[#3880df] ">
+            {" "}
+            <i className="fa fa-heart-o  mr-2 mt-1"></i> Save seller
+          </span>
+          <span className=" text-[#3880df] underline">Contact seller</span>
+          <br />
+          <span className=" text-[#3880df] underline">See other items</span>
+          <br />
+        </div>
+        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-3 rounded-2xl ">
+          <h1 className="font-bold">Shop related items</h1>
+          <span className="flex  text-[#3880df]">
+            Shop now <i class="material-icons">arrow_forward</i>
+          </span>
+          <div className="flex justify-between">
+            <img className="w-[84px] h-[84px]" src={sp1} alt="" />
+            <img className="w-[84px] h-[84px]" src={sp2} alt="" />
+            <img className="w-[84px] h-[84px]" src={sp3} alt="" />
+          </div>
+          <div className="flex items-center">
+            <div>
+              <img className="w-11 h-11" src={sp4} alt="" />
+            </div>
+            <div className="ml-1">
+              <h1 className="font-bold">OnlineShoesStore</h1>
+              <div className="flex justify-between ">
+                <p>
+                  <span className="font-bold">140K </span>
+                  <span className="text-[#848f94]"> items sold</span>
+                </p>
+                <p className="text-[#848f94] ml-6">Sponsored</p>
               </div>
             </div>
           </div>

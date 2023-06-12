@@ -9,8 +9,7 @@ const InnerProductDescription = () => {
   const itemNumber = 225585996570;
   const item = {
     title: "Item specifics",
-    condition: `New with box: A brand-new, unused, and unworn item (including handmade items)
-     in the original packaging (such as the original box or bag) and/or with the original tags attached`,
+    condition: `New With box`,
     theme: "Moon",
     customised: "No",
     brand: "adidas",
@@ -45,7 +44,7 @@ const InnerProductDescription = () => {
         productLine: "adidas Yeezy",
       },
       obj3: {
-        manufacturerColour: "Super Moon Yellow/Super Moon Yellow",
+        manufacturerColour: "Super Moon ",
         collaboration: "Kanye West",
         releaseDate: "20171206",
       },
@@ -90,81 +89,115 @@ const InnerProductDescription = () => {
               <h1 className="font-semibold mt-14 text-2xl">{item.title}</h1>
               <div className="flex flex-wrap  ">
                 <div className="">
-                  <div className="flex ">
-                    <p className="text-gray-500  w-[183px] h-20 mt-12">
+                  <div className="flex justify-between ">
+                    <p className="text-gray-500   w-1/3  md:w-[183px] h-20 mt-12">
                       Condition
                     </p>
-                    <p className="w-[450px] break-words font-semibold h-20 mt-12">
+                    <p className="w-[50%]  md:w-[450px] break-words font-semibold h-20 mt-12">
                       {item.condition}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Theme</p>
-                    <p className="w-[450px] font-semibold h-4">{item.theme}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Theme
+                    </p>
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.theme}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Customised</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Customised
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.customised}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Brand</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">{item.brand}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Brand
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.brand}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">UK Shoe Size</p>
-                    <p className="w-[450px] font-semibold h-4">
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      UK Shoe Size
+                    </p>
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.ukShoeSize}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Department</p>
-                    <p className="w-[450px] font-semibold h-4">
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Department
+                    </p>
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.department}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Type</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">{item.type}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Type
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.type}
+                    </p>
                   </div>
                 </div>
                 <div className="ml-9">
                   <div className="flex ">
-                    <p className="text-gray-500 w-[183px] h-20 mt-12">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-20 mt-12">
                       Release Year
                     </p>
-                    <p className="w-[450px] font-semibold h-20 mt-12">
+                    <p className="w-1/2  md:w-[450px] font-semibold h-20 mt-12">
                       {item.releaseYear}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Model</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">{item.model}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Model
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.model}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Style</p>
-                    <p className="w-[450px] font-semibold h-4">{item.style}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Style
+                    </p>
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.style}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">MPN</p>
-                    <p className="w-[450px] font-semibold h-4">{item.mpn}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">MPN</p>
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.mpn}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
                       Upper Material
                     </p>
-                    <p className="w-[450px] font-semibold h-4">
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.upperMaterial}
                     </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Colour</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">{item.colour}</p>
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Colour
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
+                      {item.colour}
+                    </p>
                   </div>
-                  <div className="flex mt-5">
-                    <p className="text-gray-500 w-[183px] h-4">Product Line</p>{" "}
-                    <p className="w-[450px] font-semibold h-4">
+                  <div className="flex mt-5 justify-between">
+                    <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
+                      Product Line
+                    </p>{" "}
+                    <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.productLine}
                     </p>{" "}
                   </div>
@@ -180,11 +213,16 @@ const InnerProductDescription = () => {
                       </h1>
                       <div className="flex flex-wrap">
                         {Object.entries(item.obj1).map(([key, value]) => (
-                          <div className="w-1/2 flex mb-5" key={key}>
-                            <span className="font-medium text-gray-500  w-[183px] h-4 ">
+                          <div
+                            className="w-full justify-between md:w-1/2 flex mb-5"
+                            key={key}
+                          >
+                            <span className="font-medium text-gray-500  w-1/2  md:w-[183px] h-4 ">
                               {key}
                             </span>{" "}
-                            <p className="font-bold w-[450px] h-4">{value}</p>
+                            <p className="font-bold w-1/2  md:w-[450px] h-4">
+                              {value}
+                            </p>
                           </div>
                         ))}
                       </div>
@@ -193,11 +231,16 @@ const InnerProductDescription = () => {
                       </h1>
                       <div className="flex flex-wrap">
                         {Object.entries(item.obj2).map(([key, value]) => (
-                          <div className="w-1/2 flex mb-5" key={key}>
-                            <span className="font-medium text-gray-500 w-[183px] h-4">
+                          <div
+                            className=" w-full justify-between md:w-1/2 flex mb-5"
+                            key={key}
+                          >
+                            <span className="font-medium text-gray-500 w-1/2  md:w-[183px] h-4">
                               {key}
                             </span>{" "}
-                            <p className="font-bold w-[450px] h-4">{value}</p>
+                            <p className="font-bold w-1/2  md:w-[450px] h-4">
+                              {value}
+                            </p>
                           </div>
                         ))}
                       </div>
@@ -206,11 +249,16 @@ const InnerProductDescription = () => {
                       </h1>
                       <div className="flex flex-wrap">
                         {Object.entries(item.obj3).map(([key, value]) => (
-                          <div className="w-1/2 flex mb-5" key={key}>
-                            <span className="font-medium text-gray-500 w-[183px] h-4">
+                          <div
+                            className="w-full justify-between md:w-1/2 flex mb-5"
+                            key={key}
+                          >
+                            <span className="font-medium text-gray-500 w-1/2  md:w-[183px] h-4">
                               {key}
                             </span>{" "}
-                            <p className="font-bold w-[450px] h-4">{value}</p>
+                            <p className="font-bold w-1/2  md:w-[450px] h-4">
+                              {value}
+                            </p>
                           </div>
                         ))}
                       </div>
@@ -292,7 +340,7 @@ const InnerProductDescription = () => {
             </h1>
             <div className="flex items-center mb-4 mt-5">
               <h1>Change Country:</h1>
-              <select className="ml-4">
+              <select className="ml-4 w-[50%] md:w-[30%]">
                 <option value="AFG">Afghanistan</option>
                 <option value="ALA">Åland Islands</option>
                 <option value="ALB">Albania</option>

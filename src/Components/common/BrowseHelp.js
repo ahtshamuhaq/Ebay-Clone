@@ -5,7 +5,7 @@ const BrowseHelp = () => {
     <div>
       <div className="bg-[#f7f7f7] p-4">
         <h1 className="font-semibold text-3xl">Browse Help Articles</h1>
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap  justify-between">
           <div className="bg-white flex  justify-center  mt-5 items-center w-[29%] h-[250px] ">
             <h1>
               <i class="fa fa-shopping-cart text-blue-600 text-6xl"></i>
@@ -61,7 +61,7 @@ const BrowseHelp = () => {
             assistant, or contact an agent
           </p>
         </div>
-        <h1 className="text-center text-2xl font-semibold">
+        <h1 className="text-center text-2xl mt-4  font-semibold">
           Other options for you
         </h1>
         <div className="hidden md:flex mt-7  justify-center">

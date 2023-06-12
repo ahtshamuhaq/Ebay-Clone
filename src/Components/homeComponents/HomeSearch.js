@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ebaylg from "./../../pictures/ebaylg.png";
 import ReactSearchBox from "react-search-box";
 import Button from "../common/Button";
+import { Link } from "react-router-dom";
 const HomeSearch = ({ variant }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -118,7 +119,9 @@ const HomeSearch = ({ variant }) => {
   return (
     <div className="flex mx-auto items-center w-[90%] `">
       <div className=" hidden lg:block w-36">
-        <img src={ebaylg} alt="" />
+        <Link to={"/"}>
+          <img src={ebaylg} alt="" />
+        </Link>
       </div>
 
       <div className="relative inline-block">

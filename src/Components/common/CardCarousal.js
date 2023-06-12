@@ -32,6 +32,7 @@ import c3j from "./../../pictures/c3j.png";
 import c3k from "./../../pictures/c3k.png";
 import c3l from "./../../pictures/c3l.png";
 import c3m from "./../../pictures/c3m.png";
+import { Link } from "react-router-dom";
 const CardCarousal = () => {
   const cardData = [
     {
@@ -258,7 +259,9 @@ const CardCarousal = () => {
                 index === currentIndex[0] ? "active" : ""
               }`}
             >
-              <CardsForSlider data={card} />
+              <Link to={"/pages/home/ProductPage"}>
+                <CardsForSlider data={card} />
+              </Link>
             </div>
           ))}
         </div>
@@ -314,7 +317,9 @@ const CardCarousal = () => {
                 index === currentIndex[1] ? "active" : ""
               }`}
             >
-              <CardsForSlider data={card} />
+              <Link to={"/pages/home/ProductPage"}>
+                <CardsForSlider data={card} />
+              </Link>
             </div>
           ))}
         </div>
@@ -370,7 +375,9 @@ const CardCarousal = () => {
                 index === currentIndex[2] ? "active" : ""
               }`}
             >
-              <CardsForSlider data={card} />
+              <Link to={"/pages/home/ProductPage"}>
+                <CardsForSlider data={card} />
+              </Link>
             </div>
           ))}
         </div>

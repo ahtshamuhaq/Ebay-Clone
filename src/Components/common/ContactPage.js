@@ -1,11 +1,14 @@
 import React from "react";
 import ebay from "./../../pictures/ebaylg.png";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 const ContactPage = () => {
   return (
     <div className="w-[90%] mt-6 mb-12 mx-auto  p-2">
       <div className="flex items-center">
-        <img className="w-40" src={ebay} alt="" />
+        <Link to={"/"}>
+          <img className="w-40" src={ebay} alt="" />
+        </Link>
         <h1 className=" ml-5 text-4xl font-semibold">Customer Service</h1>
       </div>
       <div className="flex items-center mt-6 text-[#948f95]">

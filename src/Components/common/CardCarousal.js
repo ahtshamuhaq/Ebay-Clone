@@ -236,7 +236,7 @@ const CardCarousal = () => {
 
   return (
     <div>
-      <div className="flex  font-semibold text-3xl  mb-5">
+      <div className="flex  font-semibold text-xl  mb-5">
         <h1 className="hover:underline">Your Recently Viewed Items</h1>
       </div>
       <div className="flex">
@@ -275,7 +275,7 @@ const CardCarousal = () => {
           </i>
         </button>
       </div>
-      <div className="flex  font-semibold text-3xl mt-12 mb-5">
+      <div className="flex  font-semibold text-xl mt-12 mb-5">
         <h1 className="hover:underline border-r-2 pr-6 border-[#bcbcbc]">
           adidas Yeezy 500 Athletic Shoes
         </h1>
@@ -333,7 +333,7 @@ const CardCarousal = () => {
           </i>
         </button>
       </div>
-      <div className="flex  font-semibold text-3xl mt-12 mb-5">
+      <div className="flex  font-semibold text-xl mt-12 mb-5">
         <h1 className="hover:underline border-r-2 w-24 border-[#bcbcbc]">
           Deals
         </h1>

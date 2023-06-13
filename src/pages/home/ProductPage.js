@@ -40,7 +40,7 @@ import SellerFeedback from "../../Components/common/SellerFeedback";
 import Ratings from "../../Components/common/Ratings";
 import CardGrid from "../../Components/common/CardGrid";
 import Footer from "../../Components/common/Footer";
-const ProductPage = () => {
+const ProductPage = (props) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState(0);
   const data = {
@@ -298,8 +298,10 @@ const ProductPage = () => {
 
   return (
     <div>
-      <Navbar />
-      <HomeSearch variant="outlined" />
+      <div className="w-[90%] mx-auto">
+        <Navbar listItems={props.listItems} lg={props.lg} />
+        <HomeSearch variant="outlined" />
+      </div>
       <div className="w-[90%] mt-6 mx-auto">
         <Route />
       </div>

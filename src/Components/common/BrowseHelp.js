@@ -5,27 +5,27 @@ const BrowseHelp = () => {
     <div>
       <div className="bg-[#f7f7f7] p-4">
         <h1 className="font-semibold text-3xl">Browse Help Articles</h1>
-        <div className="flex flex-wrap  justify-between">
-          <div className="bg-white flex  justify-center  mt-5 items-center w-[29%] h-[250px] ">
+        <div className="flex md:flex-wrap md:flex-row lg:flex-nowrap flex-col justify-between">
+          <div className="bg-white flex  justify-center  mt-5 items-center w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="fa fa-shopping-cart text-blue-600 text-6xl"></i>
               <p className="font-semibold text-xl">Buying </p>
             </h1>
           </div>
-          <div className="bg-white flex   justify-center mt-5 items-center w-[29%] h-[250px] ">
+          <div className="bg-white flex   justify-center mt-5 items-center  w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="fa fa-tag text-blue-600 text-6xl"></i>
 
               <p className="font-semibold text-xl">Selling </p>
             </h1>
           </div>
-          <div className="bg-white flex   justify-center mt-5 items-center w-[29%] h-[250px] ">
+          <div className="bg-white flex   justify-center mt-5 items-center w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="fa fa-user text-blue-600 ml-3 text-6xl"></i>
               <p className="font-semibold text-xl">Account </p>
             </h1>
           </div>
-          <div className="bg-white flex   justify-center mt-5 items-center w-[29%] h-[250px] ">
+          <div className="bg-white flex   justify-center mt-5 items-center w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="material-icons text-blue-600 ml-10 text-6xl">
                 assignment_return
@@ -33,7 +33,7 @@ const BrowseHelp = () => {
               <p className="font-semibold text-xl">Returns & Refunds </p>
             </h1>
           </div>
-          <div className="bg-white flex   justify-center mt-5 items-center w-[29%] h-[250px] ">
+          <div className="bg-white flex   justify-center mt-5 items-center w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="material-icons text-blue-600 ml-10 text-6xl">
                 local_shipping
@@ -42,7 +42,7 @@ const BrowseHelp = () => {
               <p className="font-semibold text-xl">Shipping & Tracking </p>
             </h1>
           </div>
-          <div className="bg-white flex   justify-center mt-5 items-center w-[29%] h-[250px] ">
+          <div className="bg-white flex   justify-center mt-5 items-center w-full   md:w-[29%] h-[250px] ">
             <h1>
               <i class="fa fa-dollar text-blue-600 ml-10 text-6xl"></i>
               <p className="font-semibold text-xl">Fees & Billing </p>

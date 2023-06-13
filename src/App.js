@@ -26,10 +26,22 @@ function App() {
       {/* <HomePage  /> */}
       <Routes>
         <Route path="/" element={<HomePage listItems={listItems} lg={lg} />} />
-        <Route path="/pages/home/ProductPage" element={<ProductPage />} />
-        <Route path="/pages/home/AddCart" element={<AddCart />} />
-        <Route path="/pages/home/HelpAndContact" element={<HelpAndContact />} />
-        <Route path="/pages/home/PrivacyChoices" element={<PrivacyChoices />} />
+        <Route
+          path="/pages/home/ProductPage"
+          element={<ProductPage listItems={listItems} lg={lg} />}
+        />
+        <Route
+          path="/pages/home/AddCart"
+          element={<AddCart listItems={listItems} lg={lg} />}
+        />
+        <Route
+          path="/pages/home/HelpAndContact"
+          element={<HelpAndContact listItems={listItems} lg={lg} />}
+        />
+        <Route
+          path="/pages/home/PrivacyChoices"
+          element={<PrivacyChoices listItems={listItems} lg={lg} />}
+        />
       </Routes>
     </div>
   );

@@ -117,7 +117,7 @@ const HomeSearch = ({ variant }) => {
     { value: "", label: "Everything Else" },
   ];
   return (
-    <div className="flex mx-auto items-center w-[90%] `">
+    <div className="flex mx-auto items-center mb-8 w-[100%] `">
       <div className=" hidden lg:block w-36">
         <Link to={"/"}>
           <img src={ebaylg} alt="" />

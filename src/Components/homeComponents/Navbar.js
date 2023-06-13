@@ -33,9 +33,9 @@ const Navbar = ({ listItems }) => {
   };
 
   return (
-    <div className="mx-auto text-xs w-full md:w-[90%]">
+    <div className="mx-auto text-xs w-full md:w-full ">
       <nav className="bg-white border-gray-200 w-full dark:bg-gray-900 ">
-        <div className=" flex flex-wrap items-center justify-between md:items-center mx-auto p-4">
+        <div className=" flex flex-wrap items-baseline justify-between md:items-baseline mx-auto ">
           <div>
             <a href="/" className="flex items-center">
               <img
@@ -45,9 +45,7 @@ const Navbar = ({ listItems }) => {
               />
 
               <div className="hidden md:flex">
-                <Link>
-                  <span>hi!</span>
-                </Link>
+                <span>hi!</span>
                 <span>
                   <a className="ml-1 text-[#3880df] underline" href="/">
                     Sign in
@@ -72,8 +70,8 @@ const Navbar = ({ listItems }) => {
               </div>
             </a>
           </div>
-          <div className="hidden   md:w-auto md:mb-8 md:flex md:mx-auto">
-            <div className="absolute flex justify-between items-center mb-4 text-gray-700 pt-1  ">
+          <div className="hidden    md:mb-8 md:flex ">
+            <div className=" flex justify-between items-center mb-4 text-gray-700 pt-1  ">
               <span className="hover:text-[#3880df]">Ship to</span>
               <span className="ml-5 hover:underline">Sell</span>
               <div className="ml-5">

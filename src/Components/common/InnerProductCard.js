@@ -152,7 +152,7 @@ const InnerProductCard = ({
                     </p>
                   )}
                 </div>
-                <div className="ml-6">
+                <div className="">
                   {data.numOfBids && (
                     <p className="text-[#367dd0] underline mb-2">
                       [ {data.numOfBids} Bids]
@@ -187,7 +187,10 @@ const InnerProductCard = ({
                       </Link>
                     )}
                     {data.buttonText3 && (
-                      <Button variant="whiteLong">{data.buttonText3}</Button>
+                      <Button variant="whiteLong">
+                        <i class="fa fa-heart-o mr-2"></i>
+                        {data.buttonText3}
+                      </Button>
                     )}
                   </div>
                 </div>

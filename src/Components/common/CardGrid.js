@@ -19,7 +19,7 @@ const CardGrid = () => {
     <div className="container">
       <div className="cards flex flex-wrap justify-between ">
         {Array.from({ length: 25 }).map((_, index) => (
-          <div className="w-[271px] ">
+          <div className="w-[271px] p-2 m-2 ">
             <OuterCard product={product} key={index} />
           </div>
         ))}

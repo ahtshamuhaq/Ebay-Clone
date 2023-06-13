@@ -40,6 +40,7 @@ import SellerFeedback from "../../Components/common/SellerFeedback";
 import Ratings from "../../Components/common/Ratings";
 import CardGrid from "../../Components/common/CardGrid";
 import Footer from "../../Components/common/Footer";
+import InnerCa from "../../Components/common/InnerCa";
 const ProductPage = (props) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState(0);
@@ -63,7 +64,7 @@ const ProductPage = (props) => {
     importCharges: "£126.03 ",
     delivery: "  Tue, Jun 13 and Fri, Jun 16 to 46000 ",
     returns: " Seller does not accept returns.",
-    paymentMethod: [paypal, gpay, visa, mastercard, amex],
+    paymentMethod: [paypal, gpay, visa, mastercard],
   };
   const images = [Inner1, Inner2, Inner3, Inner4, Inner5, Inner6, Inner7];
   const card2Data = [
@@ -315,6 +316,7 @@ const ProductPage = (props) => {
           setPreviousImageIndex={setPreviousImageIndex}
         />
       </div>
+
       <div className="w-[90%] mt-6 mb-12 mx-auto border-2 border-[#ccc5c5] p-2">
         <InnerCardCarousal cardData={card2Data} />{" "}
       </div>

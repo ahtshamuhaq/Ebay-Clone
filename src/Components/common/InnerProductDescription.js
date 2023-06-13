@@ -17,7 +17,7 @@ const InnerProductDescription = () => {
     department: "Men",
     type: "Trainer",
     releaseYear: 2017,
-    model: "adidas Yeezy 500",
+    model: "adidas 500",
     style: "Sneaker",
     mpn: "DB2966",
     upperMaterial: "Mesh",
@@ -44,7 +44,7 @@ const InnerProductDescription = () => {
         productLine: "adidas Yeezy",
       },
       obj3: {
-        manufacturerColour: "Super Moon ",
+        manufacturer: "Super Moon ",
         collaboration: "Kanye West",
         releaseDate: "20171206",
       },
@@ -55,7 +55,7 @@ const InnerProductDescription = () => {
       <div className="flex">
         <p
           onClick={() => handleTabClick("About this item")}
-          className={`font-bold mr-4 ${
+          className={`font-bold mr-4 hover:cursor-pointer ${
             activeTab === "About this item"
               ? "text-[#0d5dbe]"
               : "text-gray-500 "
@@ -65,10 +65,10 @@ const InnerProductDescription = () => {
         </p>
         <p
           onClick={() => handleTabClick("Shipping, returns & payments")}
-          className={`font-bold ${
+          className={`font-bold hover:cursor-pointer ${
             activeTab === "Shipping, returns & payments"
               ? "text-[#0d5dbe]"
-              : "text-gray-500 "
+              : "text-gray-500  "
           }`}
         >
           Shipping, returns & payments
@@ -146,7 +146,7 @@ const InnerProductDescription = () => {
                     </p>
                   </div>
                 </div>
-                <div className="ml-9">
+                <div className="">
                   <div className="flex ">
                     <p className="text-gray-500 w-1/2  md:w-[183px] h-20 mt-12">
                       Release Year
@@ -179,7 +179,7 @@ const InnerProductDescription = () => {
                   </div>
                   <div className="flex mt-5 justify-between">
                     <p className="text-gray-500 w-1/2  md:w-[183px] h-4">
-                      Upper Material
+                      Material
                     </p>
                     <p className="w-1/2  md:w-[450px] font-semibold h-4">
                       {item.upperMaterial}

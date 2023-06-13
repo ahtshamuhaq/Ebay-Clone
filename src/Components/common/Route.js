@@ -30,8 +30,8 @@ const Route = () => {
           Athletic Shoes
         </span>
       </div>
-      <div>
-        <span className=" border-r-black border-r-2 pr-3 text-xs hover:underline text-[#2661bd]  hidden sm:block">
+      <div className="flex">
+        <span className=" border-r-black border-r h-4 pr-3 text-xs hover:underline text-[#2661bd]  hidden sm:block">
           Share
         </span>
         <span className=" text-xs ml-2 hover:underline text-[#2661bd]  hidden sm:block">

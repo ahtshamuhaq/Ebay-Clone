@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "nuka-carousel";
 import Button from "./../common/Button";
-{
-  /* <div className="w-20 h-10  sm:hidden">
-<img src={props.lg} alt="" />
-</div> */
-}
+
 const Carousal = () => {
   const slides = [
     {

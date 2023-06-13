@@ -104,8 +104,13 @@ const Footer = () => {
           <div>
             <span className="underline mr-2">Site map,</span>
             <span className="underline mr-2">User Agreement,</span>
-            <span className="underline mr-2">Privacy,</span>
-            <span className="underline mr-2">Cookies &</span>
+            <Link to={"/pages/home/PrivacyChoices"}>
+              <span className="underline ml-2 text-sm">
+                Your Privacy Choices
+              </span>
+              ,
+            </Link>
+            <span className="underline ml-2">Cookies &</span>
             <span className="underline mr-2">AdChoice.</span>
           </div>
           <div>© 1995-2023 eBay Inc.</div>

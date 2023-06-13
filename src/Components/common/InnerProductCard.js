@@ -368,7 +368,7 @@ const InnerProductCard = ({
         </div>
       </div>
       <div className="flex flex-wrap justify-center mt-6 xl:hidden">
-        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 mb-4 rounded-2xl ">
           <h1 className="font-semibold">Shop with confidence</h1>
           <div className="flex justify-between  items-center">
             <img className="w-[25px] h-[25px]" src={detailIcon} alt="" />
@@ -381,7 +381,7 @@ const InnerProductCard = ({
             </p>
           </div>
         </div>
-        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 rounded-2xl ">
+        <div className="w-[300px] border border-[#dfdfdf] shadow-xl py-4 px-5 mb-4 rounded-2xl ">
           <span className="font-bold">Seller Information</span>
           <br />
           <span className="flex  text-[#3880df] underline">

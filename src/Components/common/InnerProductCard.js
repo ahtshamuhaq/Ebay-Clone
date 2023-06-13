@@ -358,7 +358,7 @@ const InnerProductCard = ({
             </h1>
           )}
           {data.paymentMethod.length > 0 && (
-            <div className="flex w-8 h-8 font-semibold text-lg  ">
+            <div className="flex w-8 sm:w-14 h-8 font-semibold text-lg  ">
               Payments:
               {data.paymentMethod.map((method, methodIndex) => (
                 <img key={methodIndex} src={method} alt={method} />

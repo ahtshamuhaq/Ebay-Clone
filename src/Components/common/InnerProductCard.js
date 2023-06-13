@@ -396,9 +396,7 @@ const InnerProductCard = ({
           </span>
           <span className="text-sm">100% positive feedback</span>
           <br />
-          <span>
-            ................................................................................
-          </span>
+          <span>............................................</span>
           <br />
           <span className="flex items-center  text-[#3880df] ">
             {" "}

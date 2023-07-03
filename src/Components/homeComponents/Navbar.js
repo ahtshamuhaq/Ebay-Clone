@@ -199,29 +199,23 @@ const Navbar = ({ listItems }) => {
                   </p>
                 </li>
                 <li>
-                  <a
-                    href="/"
-                    className="block py-2  pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                  >
+                  <p className="block py-2  pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                     <Link to={"/pages/home/HelpAndContact"}>
                       <p className="text-blackhover:underline">
                         Help & Contact
                       </p>
                     </Link>
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <Link to={"pages/home/SignIn"}>
-                    <a
-                      href="/"
-                      className="block py-2 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >
+                  <Link to={"/pages/home/SignIn"}>
+                    <p className="block py-2 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                       <p className=" text-[#3880df] underline">Sign in</p>
-                    </a>
+                    </p>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"pages/home/register"}>
+                  <Link to={"/pages/home/register"}>
                     <p className="text-[#3880df] underline ">register</p>
                   </Link>
                 </li>

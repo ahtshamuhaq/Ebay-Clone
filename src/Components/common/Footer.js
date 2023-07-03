@@ -13,7 +13,14 @@ const Footer = () => {
       ],
     },
     {
-      title: "Sell",
+      title: (
+        <Link
+          to="/pages/home/CustomerServices"
+          className="text-[#7c7976] font-bold"
+        >
+          Sell
+        </Link>
+      ),
       items: ["Start selling", "Learn to sell", "Affiliates"],
       title2: "Tools & apps",
       items2: ["Developers", "Security center", "Site map"],
@@ -22,6 +29,7 @@ const Footer = () => {
       title: "Stay connected",
       items: ["eBay's Blogs", "Facebook", "Twitter"],
     },
+    //
     {
       title: "About eBay",
       items: [

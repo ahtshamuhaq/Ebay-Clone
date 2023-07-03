@@ -8,6 +8,7 @@ import ProductPage from "./pages/home/ProductPage";
 import ebay from "./pictures/ebaylg.png";
 import SignIn from "./pages/home/SignIn";
 import Register from "./pages/home/Register";
+import CustomerServices from "./pages/home/CustomerServices";
 
 function App() {
   const listItems = [
@@ -46,6 +47,10 @@ function App() {
         />
         <Route path="/pages/home/SignIn" element={<SignIn />} />
         <Route path="/pages/home/Register" element={<Register />} />
+        <Route
+          path="/pages/home/CustomerServices"
+          element={<CustomerServices />}
+        />
       </Routes>
     </div>
   );

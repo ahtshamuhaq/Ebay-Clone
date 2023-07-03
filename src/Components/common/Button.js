@@ -33,7 +33,7 @@ const Button = ({ variant, children, ...rest }) => {
       : variant === "whiteDefault"
       ? "bg-white ml-1 w-full transition-colors duration-300 border border-[#4979cc] text-[#4979cc] py-4 px-12 mb-1"
       : variant === "outlinedBlue"
-      ? "bg-transparent text-[#2d6fc5] ml-1 w-full transition-colors rounded-full duration-300 border border-[#2d6fc5] py-2 px-20 mb-1"
+      ? "bg-transparent text-[#2d6fc5] ml-1 w-full transition-colors rounded-full duration-300 border border-[#2d6fc5] py-2 px-2 mb-1"
       : variant === "brilliantWhite"
       ? "bg-[#e1e8fd] text-[#5e6065] ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-8 mb-1"
       : variant === "navy"

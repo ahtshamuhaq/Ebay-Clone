@@ -229,12 +229,12 @@ const Register = () => {
                     </label>
                   </div>
                 </div>
-                <div className="flex mt-5 mr-7 items-center">
+                <div className="flex mt-5 items-center">
                   <div className="relative">
                     <input
                       type={passwordVisible ? "text" : "password"}
                       id="floating_filled"
-                      className="block rounded-xl font-bold border border-black px-2.5 pb-2.5 w-[290px] pt-5 sm:w-[450px] text-sm text-gray-900 bg-[#f7f7f7] dark:bg-[#f7f7f7] appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 pr-10 peer"
+                      className="block rounded-xl font-bold border border-black px-2.5 pb-2.5 w-full pt-5 sm:w-[450px] text-sm text-gray-900 bg-[#f7f7f7] dark:bg-[#f7f7f7] appearance-none dark:text-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 pr-10 peer"
                       placeholder=" "
                       value={password}
                       onChange={handlePasswordChange}

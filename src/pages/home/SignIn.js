@@ -46,7 +46,7 @@ const SignIn = () => {
             </div>
           </div>
           <div className="flex justify-center items-start mt-5">
-            <div className="w-[280] sm:w-[350px] ">
+            <div className="w-[280px] sm:w-[350px] ">
               <Button variant={inputValue ? "darkCyan" : "lightGray"}>
                 Continue
               </Button>

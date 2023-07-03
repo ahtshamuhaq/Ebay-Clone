@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import lg from "./../../pictures/ebaylg.png";
 import { Button } from "../../Components";
-import Footer from "../../Components/common/Footer";
 import { Link } from "react-router-dom";
 const SignIn = () => {
   const [inputValue, setInputValue] = useState("");

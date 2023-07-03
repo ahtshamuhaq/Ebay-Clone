@@ -4,7 +4,18 @@ import { Link } from "react-router-dom";
 import { Button } from "../../Components";
 const Register = () => {
   const [isBusinessAccount, setIsBusinessAccount] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleText = () => {
+    setIsOpen(!isOpen);
+  };
+  const [isOpen2, setIsOpen2] = useState(false);
+  const toggleHelp = () => {
+    setIsOpen2(!isOpen2);
+  };
+  const [isOpen3, setIsOpen3] = useState(false);
+  const toggleBusiness = () => {
+    setIsOpen3(!isOpen3);
+  };
   const handleBusinessAccountChange = () => {
     setIsBusinessAccount(true);
   };
@@ -79,6 +90,57 @@ const Register = () => {
         </p>
       </div>
       <p className="font-bold text-4xl text-center mt-6">Create an account</p>
+      <div className="fixed right-0 hidden bg-[#d1cfcf] border-t border-t-blue-500 p-2 w-12 h-12 xl:flex justify-center">
+        <i
+          onClick={toggleHelp}
+          class="fa fa-question-circle-o text-2xl text-blue-500"
+        ></i>
+      </div>
+      {isOpen2 && (
+        <div className="fixed top-20 right-16 w-[400px] h-[80vh] hidden xl:block border-t border-t-gray-300 z-20 bg-white rounded-xl shadow-xl">
+          <div className=" border-b flex pb-4 mt-5 justify-center items-center  border-b-gray-600">
+            <p className="font-bold text-2xl ml-24 ">Help</p>
+            <i onClick={toggleHelp} class="material-icons ml-40">
+              cancel
+            </i>
+          </div>
+          <p className="font-semibold text-2xl ml-3 ">FAQs</p>
+          <p
+            onClick={toggleBusiness}
+            className="flex mt-3 ml-3 cursor-pointer font-bold justify-between items-center "
+          >
+            Do I need a business account?{" "}
+            <i class="material-icons text-blue-500 text-2xl mr-3">
+              keyboard_arrow_down
+            </i>
+          </p>
+
+          {isOpen3 && (
+            <div>
+              <p className="p-3 font-semibold">
+                You should register for a business account if you'd like to
+                carry out any of the following activities on eBay:
+              </p>
+              <ul className="list-disc ml-8">
+                <li>List items that you've made or bought to resell</li>
+                <li>Regularly sell a large number of goods</li>
+                <li>Buy items for your business</li>
+                <li>You are a nonprofit</li>
+              </ul>
+            </div>
+          )}
+          <hr className="mt-2" />
+
+          <p className="font-bold text-2xl ml-6 mt-8">Need More Help?</p>
+          <div className="w-[95%] mx-auto mt-8">
+            <Button variant="blueSmall">Visit Help & Contact</Button>
+          </div>
+          <p className="font-bold mt-8 ml-4 text-xl">Let us know</p>
+          <p className="flex items-center ml-6 text-blue-600 font-semibold mt-4">
+            Feedback <i class="material-icons ml-6">arrow_forward</i>
+          </p>
+        </div>
+      )}
 
       <div>
         <div className="border-b border-b-black pb-2">
@@ -109,6 +171,26 @@ const Register = () => {
                 Business Account
               </label>
             </div>
+            <div className="hidden xl:block" onClick={toggleText}>
+              <i className="fa fa-exclamation-circle ml-4"></i>
+            </div>
+            {isOpen && (
+              <div className=" text-black hidden xl:block bg-white shadow-2xl p-5  absolute right-[230px]">
+                <div className="flex justify-between items-start">
+                  <p className="text-xs font-bold">
+                    You should choose this option if:
+                  </p>
+                  <i onClick={toggleText} class="material-icons ml-20">
+                    cancel
+                  </i>
+                </div>
+                <ul className="list-disc ml-3">
+                  <li>you are a business</li>
+                  <li>you are a nonprofit</li>
+                  <li>you regularly sell a large number of goods</li>
+                </ul>
+              </div>
+            )}
           </div>
           <div className="">
             {isBusinessAccount ? (

@@ -471,7 +471,7 @@ const Register = () => {
                   </span>{" "}
                   .
                 </p>
-                <div className="w-full mt-5 mb-4 ">
+                <div className="w-[90%] mt-5 mb-4 ">
                   <Button variant={isForm2Filled ? "darkCyan" : "lightGray"}>
                     Create Account
                   </Button>

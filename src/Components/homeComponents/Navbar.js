@@ -47,15 +47,15 @@ const Navbar = ({ listItems }) => {
               <div className="hidden md:flex">
                 <span>hi!</span>
                 <span>
-                  <a className="ml-1 text-[#3880df] underline" href="/">
-                    Sign in
-                  </a>
+                  <Link to={"pages/home/SignIn"}>
+                    <p className="ml-1 text-[#3880df] underline">Sign in</p>
+                  </Link>
                 </span>
                 <span className="ml-1"> or</span>
                 <span>
-                  <a className="text-[#3880df] underline ml-1" href="/">
-                    register
-                  </a>
+                  <Link to={"pages/home/register"}>
+                    <p className="text-[#3880df] underline ml-1">register</p>
+                  </Link>
                 </span>
                 <span>
                   <p className="text-black ml-5 hover:underline">Daily Deals</p>
@@ -122,9 +122,14 @@ const Navbar = ({ listItems }) => {
                           <span href="/">
                             Please{" "}
                             <span>
-                              <a className="text-[#3880df] underline" href="/">
-                                Sign in
-                              </a>
+                              <Link to={"pages/home/SignIn"}>
+                                <a
+                                  className="text-[#3880df] underline"
+                                  href="/"
+                                >
+                                  Sign in
+                                </a>
+                              </Link>
                             </span>{" "}
                             to view notifications.
                           </span>

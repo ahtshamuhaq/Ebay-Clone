@@ -25,7 +25,7 @@ const Button = ({ variant, children, ...rest }) => {
       : variant === "whiteSmall"
       ? "bg-[#e5e5e5] text-black ml-1 w-full transition-colors duration-300 rounded-3xl  py-2 px-4 mb-1"
       : variant === "lightGray"
-      ? " bg-[#c7c7c7] text-white ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-20 mb-1"
+      ? " bg-[#c7c7c7] text-white ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-2 mb-1 cursor-no-drop"
       : variant === "lightNavy"
       ? "bg-[#4267b2] text-white  ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-20 mb-1"
       : variant === "outlinedWhite"
@@ -37,13 +37,21 @@ const Button = ({ variant, children, ...rest }) => {
       : variant === "brilliantWhite"
       ? "bg-[#e1e8fd] text-[#5e6065] ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-8 mb-1"
       : variant === "navy"
-      ? "bg-[#3c0773] text-white ml-1 w-full transition-colors duration-300 py-2 px-8 mb-1"
+      ? "bg-[#3c0773] text-white ml-1 w-full transition-colors flex items-center duration-300 py-2 px-8 mb-1"
+      : variant === "transBlack"
+      ? "bg-transparent  text-black ml-1 w-full flex items-center rounded-full transition-colors duration-300 border font-bold border-black py-2 px-2 mb-1 "
+      : variant === "darkCyans"
+      ? " bg-[#0053a0] text-white flex items-center  ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-2 mb-1 "
       : "";
   const hoverStyles =
     variant === "transparent"
       ? "hover:bg-black hover:text-[#e8f377]"
       : variant === "errorText"
       ? "hover:bg-black hover:text-[#c8e63c]"
+      : variant === "darkCyans"
+      ? "hover:bg-[#193da8] "
+      : variant === "transBlack"
+      ? "hover:bg-[#c7c7c7] "
       : "";
 
   return (

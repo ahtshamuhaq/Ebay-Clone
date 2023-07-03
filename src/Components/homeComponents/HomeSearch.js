@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ebaylg from "./../../pictures/ebaylg.png";
-import ReactSearchBox from "react-search-box";
 import Button from "../common/Button";
 import { Link } from "react-router-dom";
 const HomeSearch = ({ variant }) => {
@@ -212,7 +211,7 @@ const HomeSearch = ({ variant }) => {
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className="hidden md:block md:mt-2">
         <Button variant="searchBox">Search</Button>
       </div>
       <div className="hidden md:block">

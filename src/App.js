@@ -9,6 +9,7 @@ import ebay from "./pictures/ebaylg.png";
 import SignIn from "./pages/home/SignIn";
 import Register from "./pages/home/Register";
 import CustomerServices from "./pages/home/CustomerServices";
+import EbayAccount from "./pages/home/EbayAccount";
 
 function App() {
   const listItems = [
@@ -51,6 +52,7 @@ function App() {
           path="/pages/home/CustomerServices"
           element={<CustomerServices />}
         />
+        <Route path="/pages/home/EbayAccount" element={<EbayAccount />} />
       </Routes>
     </div>
   );

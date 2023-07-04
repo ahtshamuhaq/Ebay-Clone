@@ -6,10 +6,10 @@ const Footer = () => {
     {
       title: "Buy",
       items: [
-        "Registration",
-        "eBay Money Back Guarantee",
-        "Bidding & buying help",
-        "Stores",
+        { text: "Registration", path: "/pages/home/EbayAccount" },
+        { text: "eBay Money Back Guarantee", path: "/ebay-guarantee" },
+        { text: "Bidding & buying help", path: "/buying-help" },
+        { text: "Stores", path: "/stores" },
       ],
     },
     {
@@ -29,7 +29,6 @@ const Footer = () => {
       title: "Stay connected",
       items: ["eBay's Blogs", "Facebook", "Twitter"],
     },
-    //
     {
       title: "About eBay",
       items: [
@@ -57,27 +56,29 @@ const Footer = () => {
       <div className="hidden  lg:flex justify-between mt-4 mb-4 w-[90%] mx-auto">
         {columns.map((column, index) => (
           <div key={index}>
-            <h1 className="text-[#7c7976] font-bold">{column.title}</h1>
+            <h1 className="text-[#7c7976] font-bold">
+              {typeof column.title === "string" ? (
+                column.title
+              ) : (
+                <Link
+                  to="/pages/home/CustomerServices"
+                  className="text-[#7c7976] font-bold"
+                >
+                  {column.title}
+                </Link>
+              )}
+            </h1>
             <ul>
               {column.items.map((item, i) => (
                 <li
                   className="text-[#c5c5c5] font-medium hover:underline"
                   key={i}
                 >
-                  {item === "Facebook" ? (
-                    <i
-                      class="fa fa-facebook-official"
-                      style={{ fontSize: "19px" }}
-                    ></i>
-                  ) : item === "Twitter" ? (
-                    <i
-                      class="fa fa-twitter-square"
-                      style={{ fontSize: "19px" }}
-                    ></i>
+                  {item.path ? (
+                    <Link to={item.path}>{item.text}</Link>
                   ) : (
-                    ""
-                  )}{" "}
-                  {item}
+                    item.text
+                  )}
                 </li>
               ))}
             </ul>
@@ -144,3 +145,24 @@ const Footer = () => {
 };
 
 export default Footer;
+//  const data = {
+//   title: 'Buy',
+//   items: [
+//     { text: 'Registration', path: '/registration' },
+//     { text: 'eBay Money Back Guarantee', path: '/ebay-guarantee' },
+//     { text: 'Bidding & buying help', path: '/buying-help' },
+//     { text: 'Stores', path: '/stores' },
+//   ],
+// };
+
+// return (
+//   <div>
+//     <h1>{data.title}</h1>
+//     <ul>
+//       {data.items.map((item, index) => (
+//         <li key={index}>
+//           <Link to={item.path}>{item.text}</Link>
+//         </li>
+//       ))}
+//     </ul>
+//   </div>

@@ -47,13 +47,13 @@ const Navbar = ({ listItems }) => {
               <div className="hidden md:flex">
                 <span>hi!</span>
                 <span>
-                  <Link to={"pages/home/SignIn"}>
+                  <Link to={"/pages/home/SignIn"}>
                     <p className="ml-1 text-[#3880df] underline">Sign in</p>
                   </Link>
                 </span>
                 <span className="ml-1"> or</span>
                 <span>
-                  <Link to={"pages/home/register"}>
+                  <Link to={"/pages/home/register"}>
                     <p className="text-[#3880df] underline ml-1">register</p>
                   </Link>
                 </span>

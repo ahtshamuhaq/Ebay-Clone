@@ -14,7 +14,7 @@ const Carousal = () => {
         <p className="text-gray-500 mt-2 text-sm hidden lg:block">
           Get the most out of selling on eBay with these deals.
         </p>
-        <div className="bg-[#f7f7f7] w-fit py-8 mt-5 mb-20 px-4 flex justify-between">
+        <div className="bg-[#f7f7f7] w-full  md:w-fit py-8 mt-5 mb-20 px-4 flex justify-between">
           <div>
             <h1 className="font-bold mt-3 mb-5">
               List up to 200 Items for FREE Every <br /> Month!

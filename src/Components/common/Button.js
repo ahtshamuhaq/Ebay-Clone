@@ -11,7 +11,7 @@ const Button = ({ variant, children, ...rest }) => {
       : variant === "redWhite"
       ? "bg-white text-[#E62048] ml-1 w-full transition-colors  duration-300 rounded-3xl py-3 px-4 font-bold mb-1"
       : variant === "blueSmall"
-      ? "bg-[#0e67ff] text-white ml-1 w-full transition-colors duration-300 rounded-3xl px-24 py-3  font-bold mb-1"
+      ? "bg-[#0e67ff] text-white ml-1 w-full transition-colors duration-300 rounded-3xl px-2 py-3  font-bold mb-1"
       : variant === "blueLong"
       ? "bg-[#0e67ff] text-white ml-1 w-full w-fit transition-colors duration-300  px-24 py-3  font-bold mb-1"
       : variant === "white"

@@ -195,7 +195,9 @@ const Navbar = ({ listItems }) => {
                     className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
                     aria-current="page"
                   >
-                    Watchlist
+                    <Link to={"/pages/home/CustomerServices"}>
+                      <p>CustomerServices</p>
+                    </Link>
                   </p>
                 </li>
                 <li>
@@ -217,6 +219,11 @@ const Navbar = ({ listItems }) => {
                 <li>
                   <Link to={"/pages/home/register"}>
                     <p className="text-[#3880df] underline ">register</p>
+                  </Link>
+                </li>
+                <li className="mt-2">
+                  <Link to={"/pages/home/EbayAccount"}>
+                    <p className="text-[#3880df] underline ">EbayAccount</p>
                   </Link>
                 </li>
               </ul>

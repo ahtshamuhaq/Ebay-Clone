@@ -8,11 +8,11 @@ import Faqs from "../Seller/Faqs";
 import Lastsec from "../Seller/Lastsec";
 import { Link } from "react-router-dom";
 
-const CustomerServices = () => {
+const CustomerServices = (props) => {
   return (
     <div>
       <div className="w-[90%] mx-auto">
-        <Navbar />
+        <Navbar listItems={props.listItems} lg={props.lg} />
         <HeroSec />
         <Basics />
         <SellBusiness />

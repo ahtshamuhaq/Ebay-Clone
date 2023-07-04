@@ -50,9 +50,12 @@ function App() {
         <Route path="/pages/home/Register" element={<Register />} />
         <Route
           path="/pages/home/CustomerServices"
-          element={<CustomerServices />}
+          element={<CustomerServices listItems={listItems} lg={lg} />}
         />
-        <Route path="/pages/home/EbayAccount" element={<EbayAccount />} />
+        <Route
+          path="/pages/home/EbayAccount"
+          element={<EbayAccount listItems={listItems} lg={lg} />}
+        />
       </Routes>
     </div>
   );

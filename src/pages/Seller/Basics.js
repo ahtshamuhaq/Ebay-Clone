@@ -7,8 +7,8 @@ const Basics = () => {
       <p className="text-gray-500 mt-2 text-sm hidden lg:block">
         Here's what you need to know to start selling.
       </p>
-      <div className="flex  mt-5">
-        <div className=" lg:w-1/3 md:w-1/2">
+      <div className="flex flex-col sm:flex-row  mt-5">
+        <div className=" lg:w-1/3 md:w-1/2 w-full">
           <div className="flex sm:block">
             <div className="bg-[#f7f7f7] font-bold w-16 h-16 flex justify-center items-center text-2xl rounded-full">
               1
@@ -23,7 +23,7 @@ const Basics = () => {
             <br /> fees.
           </div>
         </div>
-        <div className=" lg:w-1/3 md:w-1/2">
+        <div className=" lg:w-1/3 md:w-1/2 w-full">
           <div className="flex sm:block">
             <div className="bg-[#f7f7f7] font-bold w-16 h-16 flex justify-center items-center text-2xl rounded-full">
               2
@@ -37,7 +37,7 @@ const Basics = () => {
             <br /> our customer service team.
           </div>
         </div>
-        <div className=" lg:w-1/3 md:w-1/2">
+        <div className=" lg:w-1/3 md:w-1/2 w-full">
           <div>
             <div className="flex sm:block">
               <div className="bg-[#f7f7f7] font-bold w-16 h-16 flex justify-center items-center text-2xl rounded-full">

@@ -5,7 +5,7 @@ import CardsSeller from "../Customer-Services/CardsSeller";
 import img from "./../../pictures/message.jpg";
 import { Link } from "react-router-dom";
 
-const EbayAccount = () => {
+const EbayAccount = (props) => {
   const [searchText, setSearchText] = useState("");
 
   const handleSearch = (e) => {
@@ -18,7 +18,7 @@ const EbayAccount = () => {
   return (
     <div>
       <div className="w-[90%] mx-auto">
-        <Navbar />
+        <Navbar listItems={props.listItems} lg={props.lg} />
         <HeroSec />
       </div>
       <div className="bg-[#ff9772] text-[#111a85] flex flex-col justify-center mt-6 ">

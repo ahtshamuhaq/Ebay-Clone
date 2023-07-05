@@ -1,11 +1,7 @@
 import React from "react";
-import 
+
 const MoneyBackGuarantee = () => {
-  return <div>
-    <div>
-        // <img src={} alt="" />
-    </div>
-  </div>;
+  return <div>MoneyBackGuarantee</div>;
 };
 
 export default MoneyBackGuarantee;

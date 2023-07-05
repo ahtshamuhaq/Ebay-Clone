@@ -1,12 +1,15 @@
 import React from "react";
 import eblg from "./.././../pictures/ebaylg.png";
+import { Link } from "react-router-dom";
 const HeroSec = () => {
   return (
     <div>
       <div className="md:flex items-center hidden">
-        <div className="w-32">
-          <img src={eblg} alt="" />
-        </div>
+        <Link to={"/"}>
+          <div className="w-32">
+            <img src={eblg} alt="" />
+          </div>
+        </Link>
         <div className="text-4xl font-bold ml-6">Customer Service</div>
       </div>
       <div className="flex items-center flex-col md:flex-row mt-6 text-gray-600">

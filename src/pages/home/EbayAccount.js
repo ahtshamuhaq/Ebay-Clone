@@ -328,7 +328,7 @@ const EbayAccount = (props) => {
           </p>
         </div>
       </div>
-      <div className="ml-6 mb-4">
+      <div className="ml-6 mb-4 hidden sm:block">
         <span class="ml-4 hover:underline">About</span>
         <span class="ml-4 hover:underline">eBay</span>
         <span class="ml-4 hover:underline">Announcements</span>

@@ -7,8 +7,8 @@ const Footer = () => {
       title: "Buy",
       items: [
         { text: "Registration", path: "/pages/home/EbayAccount" },
-        { text: "eBay Money Back Guarantee", path: "/ebay-guarantee" },
-        { text: "Bidding & buying help", path: "/buying-help" },
+        { text: "eBay Money Back Guarantee", path: "/pages/home/MoneyBack" },
+        { text: "Bidding & buying help", path: "/pages/home/Buying" },
         { text: "Stores", path: "/stores" },
       ],
     },

@@ -10,6 +10,8 @@ import SignIn from "./pages/home/SignIn";
 import Register from "./pages/home/Register";
 import CustomerServices from "./pages/home/CustomerServices";
 import EbayAccount from "./pages/home/EbayAccount";
+import Buying from "./pages/home/Buying";
+import MoneyBack from "./pages/home/MoneyBack";
 
 function App() {
   const listItems = [
@@ -55,6 +57,14 @@ function App() {
         <Route
           path="/pages/home/EbayAccount"
           element={<EbayAccount listItems={listItems} lg={lg} />}
+        />
+        <Route
+          path="/pages/home/Buying"
+          element={<Buying listItems={listItems} lg={lg} />}
+        />
+        <Route
+          path="/pages/home/MoneyBack"
+          element={<MoneyBack listItems={listItems} lg={lg} />}
         />
       </Routes>
     </div>

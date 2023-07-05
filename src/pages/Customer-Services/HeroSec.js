@@ -6,11 +6,11 @@ const HeroSec = () => {
     <div>
       <div className="md:flex items-center hidden">
         <Link to={"/"}>
-          <div className="w-32">
+          <div className="w-24">
             <img src={eblg} alt="" />
           </div>
         </Link>
-        <div className="text-4xl font-bold ml-6">Customer Service</div>
+        <div className="text-4xl font-[unset] ml-6">Customer Service</div>
       </div>
       <div className="flex items-center flex-col md:flex-row mt-6 text-gray-600">
         Home <i class="material-icons hidden md:block">keyboard_arrow_right</i>

@@ -6,10 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const CardCarousals = () => {
   const cardsData = [
     {
-      title: "eBay rules and policies",
-      description:
-        "We're committed to providing a secure and fair marketplace for our buyers and sellers. To support this commitment, we've put in place rules and policies.",
-      overview: "4 min overview",
+      title: "Top buying articles for you",
+      description: "",
+      overview: "",
     },
     {
       title: "Buying as a guest",
@@ -84,13 +83,24 @@ const CardCarousals = () => {
   }
 
   return (
-    <div className="bg-[#111a85] p-8 ">
+    <div className="bg-[#111a85] p-8">
       <Carousel {...settings}>
         {groupedCards.map((slide, index) => (
           <div key={index} className="flex">
             {slide.map((card, cardIndex) => (
-              <div key={cardIndex} className="card mr-3 ml-3">
-                {card.isEmpty ? (
+              <div
+                key={cardIndex}
+                className={`card mr-3 ml-3 ${
+                  cardIndex === 0 ? "first-card" : ""
+                }`}
+              >
+                {cardIndex === 0 ? (
+                  <div className="h-72 w-72 bg-transparent flex justify-center items-center">
+                    <h1 className="text-white font-bold text-2xl">
+                      Top buying articles for you
+                    </h1>
+                  </div>
+                ) : card.isEmpty ? (
                   <div className="empty-card"></div>
                 ) : (
                   <Card

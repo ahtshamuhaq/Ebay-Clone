@@ -33,8 +33,8 @@ const Navbar = ({ listItems }) => {
   };
 
   return (
-    <div className="mx-auto text-xs w-full md:w-full ">
-      <nav className="bg-white border-gray-200 w-full dark:bg-gray-900 ">
+    <div className="mx-auto text-xs shadow-xl px-3 w-full md:w-full ">
+      <nav className="bg-white border-gray-200 w-full md:w-4/5 mx-auto dark:bg-gray-900 mb-2 ">
         <div className=" flex flex-wrap items-baseline justify-between md:items-baseline mx-auto ">
           <div>
             <a href="/" className="flex items-center">
@@ -47,7 +47,7 @@ const Navbar = ({ listItems }) => {
               <div className="hidden md:flex">
                 <span>hi!</span>
                 <span>
-                  <Link to={"/pages/home/SignIn"}>
+                  <Link to={"/pages/home/signIn"}>
                     <p className="ml-1 text-[#3880df] underline">Sign in</p>
                   </Link>
                 </span>
@@ -61,7 +61,7 @@ const Navbar = ({ listItems }) => {
                   <p className="text-black ml-5 hover:underline">Daily Deals</p>
                 </span>
                 <span>
-                  <Link to={"/pages/home/HelpAndContact"}>
+                  <Link to={"/pages/home/helpandcontact"}>
                     <p className="text-black ml-5 hover:underline">
                       Help & Contact
                     </p>
@@ -70,7 +70,7 @@ const Navbar = ({ listItems }) => {
               </div>
             </a>
           </div>
-          <div className="hidden    md:mb-8 md:flex ">
+          <div className="hidden md:flex ">
             <div className=" flex justify-between items-center mb-4 text-gray-700 pt-1  ">
               <span className="hover:text-[#3880df]">Ship to</span>
               <span className="ml-5 hover:underline">Sell</span>
@@ -222,8 +222,15 @@ const Navbar = ({ listItems }) => {
                   </Link>
                 </li>
                 <li className="mt-2">
-                  <Link to={"/pages/home/EbayAccount"}>
+                  <Link to={"/pages/home/ebayaccount"}>
                     <p className="text-[#3880df] underline ">EbayAccount</p>
+                  </Link>
+                </li>
+                <li className="mt-2">
+                  <Link to={"/pages/home/moneyback"}>
+                    <p className="text-[#3880df] underline ">
+                      eBay Money Back Policy
+                    </p>
                   </Link>
                 </li>
               </ul>

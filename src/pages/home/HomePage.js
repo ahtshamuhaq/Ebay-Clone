@@ -83,8 +83,8 @@ const HomePage = (props) => {
 
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-4/5 mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <hr />
         <div className=" ">
           <HomeSearch />

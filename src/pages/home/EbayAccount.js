@@ -17,13 +17,13 @@ const EbayAccount = (props) => {
   };
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-[90%] mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <HeroSec />
       </div>
       <div className="bg-[#ff9772] text-[#111a85] flex flex-col justify-center mt-6 ">
         <div className="w-fit mx-auto ">
-          <div className="mt-8">1 min overview</div>
+          <div className="mt-8 text-[13px]">1 min overview</div>
           <div className="text-6xl mb-8 font-bold">Your eBay account</div>
           <div className="font-semibold text-xl mb-24">
             It takes just a few minutes to create an eBay account. Once your
@@ -33,12 +33,12 @@ const EbayAccount = (props) => {
           </div>
         </div>
       </div>
-      <div className="hidden sm:flex xl:hidden items-center justify-center w-full top-50 sticky bg-white mt-4">
-        <div className=" flex items-center mt-3  ">
+      <div className="hidden sm:flex xl:hidden items-center justify-center w-full top-50 sticky bg-[#f7f7f7] mt-4">
+        <div className=" flex items-center mt-3 ml-5  ">
           <input
             type="text"
             placeholder="Search Ebay Help.."
-            className="py-2 pl-10 pr-3 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
+            className="py-2 pl-10 pr-3 text-gray-900 placeholder-gray-500 bg-[#f7f7f7] border border-gray-300 rounded-full focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
             value={searchText}
             onChange={handleSearch}
           />
@@ -82,12 +82,12 @@ const EbayAccount = (props) => {
         </div>
       </div>
       <div className="w-full flex">
-        <div className="hidden xl:flex items-center w-1/4 sticky top-0 h-fit left-0  mt-4">
+        <div className="hidden xl:flex items-center w-1/4 sticky top-0 h-fit ml-5  mt-4">
           <div className=" flex items-center mt-3 relative ">
             <input
               type="text"
               placeholder="Search Ebay Help.."
-              className="py-2 pl-10 pr-3 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
+              className="py-2 pl-4 pr-3 text-gray-900 placeholder-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring focus:ring-blue-300 focus:border-blue-300"
               value={searchText}
               onChange={handleSearch}
             />
@@ -231,14 +231,14 @@ const EbayAccount = (props) => {
               <h1 className="font-bold text-3xl">
                 Was this article helpful for you?
               </h1>
-              <div className="w-20 h-20 bg-transparent border-2 border-blue-600 rounded-full hidden  md:flex justify-center items-center">
+              <div className="w-14 h-14 bg-transparent border-2 border-blue-600 rounded-full hidden  md:flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-12 h-12 text-blue-600"
+                  className="w-8 h-8 text-blue-600"
                 >
                   <path
                     strokeLinecap="round"
@@ -247,14 +247,14 @@ const EbayAccount = (props) => {
                   />
                 </svg>
               </div>
-              <div className="w-20 h-20 bg-transparent border-2 border-blue-600 rounded-full  hidden  md:flex justify-center items-center">
+              <div className="w-14 h-14 bg-transparent border-2 border-blue-600 rounded-full  hidden  md:flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-12 h-12 text-blue-600"
+                  class="w-8 h-8 text-blue-600"
                 >
                   <path
                     stroke-linecap="round"
@@ -264,14 +264,14 @@ const EbayAccount = (props) => {
                 </svg>
               </div>
               <div className="flex mt-4 md:hidden">
-                <div className="w-20 h-20 bg-transparent border-2 border-blue-600 rounded-full flex justify-center items-center">
+                <div className="w-14 h-14 bg-transparent border-2 border-blue-600 rounded-full flex justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-12 h-12 text-blue-600"
+                    className="w-8 h-8 text-blue-600"
                   >
                     <path
                       strokeLinecap="round"
@@ -280,14 +280,14 @@ const EbayAccount = (props) => {
                     />
                   </svg>
                 </div>
-                <div className="w-20 h-20 bg-transparent border-2 border-blue-600 ml-4 rounded-full flex justify-center items-center">
+                <div className="w-14 h-14 bg-transparent border-2 border-blue-600 ml-4 rounded-full flex justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-12 h-12 text-blue-600"
+                    class="w-8 h-8 text-blue-600"
                   >
                     <path
                       stroke-linecap="round"
@@ -309,7 +309,7 @@ const EbayAccount = (props) => {
             <p className="ml-9 text-lg mt-3">
               You might also be interested in:
             </p>
-            <div className="ml-10 mt-10">
+            <div className="ml-10 mt-10 pb-12">
               <CardsSeller />
             </div>
           </div>
@@ -317,18 +317,18 @@ const EbayAccount = (props) => {
         <div className="hidden xl:flex w-1/4"></div>
       </div>
 
-      <div className="bg-[#dfdfe1] mt-6 p-5 h-[370px] flex  flex-col items-center justify-center  mb-16">
+      <div className="bg-[#dfdfe1] p-5 h-[370px] flex  flex-col items-center justify-center  mb-16">
         <h1 className="text-center text-2xl font-semibold">Need more help?</h1>
         <div className="bg-white px-10 py-5 flex flex-col sm:flex-row justify-center w-fit mx-auto mt-6 items-center">
           <img src={img} alt="" />
-          <p className="sm:border-l-2 border-l-gray-600 sm:pl-4 border-l-0 pl-0 border-t-2 border-t-gray-600 pt-4 sm:border-t-0 sm:pt-0 ">
+          <p className="sm:border-l border-l-gray-600 sm:pl-4 border-l-0 pl-0 border-t border-t-gray-600 pt-4 sm:border-t-0 sm:pt-0 ">
             <span className="font-semibold ">Contact us</span> <br />
             Get the help you need from our automated <br />
             assistant, or contact an agent
           </p>
         </div>
       </div>
-      <div className="ml-6 mb-4 hidden sm:block">
+      <div className="ml-6 mb-4 text-xs hidden sm:block">
         <span class="ml-4 hover:underline">About</span>
         <span class="ml-4 hover:underline">eBay</span>
         <span class="ml-4 hover:underline">Announcements</span>
@@ -343,16 +343,16 @@ const EbayAccount = (props) => {
       <div className=" ml-6   p-2">
         <p className="mb-12 text-xs    w-full">
           Copyright © 1995-2023 eBay Inc. All Rights Reserved.
-          <span className="underline ml-1 text-sm">Accessibility</span>,
-          <span className="underline ml-1 text-sm">Privacy</span>,
-          <span className="underline ml-1 text-sm">Cookies</span>,
+          <span className="underline ml-1 text-xs">Accessibility</span>,
+          <span className="underline ml-1 text-xs">Privacy</span>,
+          <span className="underline ml-1 text-xs">Cookies</span>,
           <Link to={"/pages/home/PrivacyChoices"}>
-            <span className="underline ml-1 text-sm">Your Privacy Choices</span>
+            <span className="underline ml-1 text-xs">Your Privacy Choices</span>
             ,
           </Link>
-          <span className="underline ml-1 text-sm">Payments Terms of Use</span>,
-          <span className="underline ml-1 text-sm">User Agreement</span> and{" "}
-          <span className="underline ml-1 text-sm">AdChoice</span>
+          <span className="underline ml-1 text-xs">Payments Terms of Use</span>,
+          <span className="underline ml-1 text-xs">User Agreement</span> and{" "}
+          <span className="underline ml-1 text-xs">AdChoice</span>
         </p>
       </div>
     </div>

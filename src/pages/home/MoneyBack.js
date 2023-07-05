@@ -7,8 +7,8 @@ import MoneyBackGuarantee from "../MoneyBack/MoneyBackGuarantee";
 const MoneyBack = (props) => {
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-[90%] mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <HomeSearch />
         <HeroSection />
         <MoneyBackGuarantee />

@@ -299,8 +299,8 @@ const ProductPage = (props) => {
 
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-[90%] mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <HomeSearch variant="outlined" />
       </div>
       <div className="w-[90%] mt-6 mx-auto">

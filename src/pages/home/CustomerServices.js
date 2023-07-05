@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 const CustomerServices = (props) => {
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-[90%] mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <HeroSec />
         <Basics />
         <SellBusiness />

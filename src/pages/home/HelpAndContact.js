@@ -7,14 +7,13 @@ import Footer from "../../Components/common/Footer";
 const HelpAndContact = (props) => {
   return (
     <div>
-      <div className="w-[90%] mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
-      </div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
+      <div className="w-[90%] mx-auto"></div>
       <ContactPage />
       <div className="w-[90%] mt-6 mb-12 mx-auto    ">
         <BrowseHelp />
       </div>
-      <div className="w-[90%] mt-6 mb-12 mx-auto  p-2">
+      <div className="lg:w-[90%] w-full mt-6 mb-12 mx-auto  p-2">
         <Footer />
       </div>
     </div>

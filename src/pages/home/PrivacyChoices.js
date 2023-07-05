@@ -7,8 +7,8 @@ import Footer from "./../../Components/common/Footer";
 const PrivacyChoices = (props) => {
   return (
     <div>
+      <Navbar listItems={props.listItems} lg={props.lg} />
       <div className="w-[90%] mt-6 mx-auto">
-        <Navbar listItems={props.listItems} lg={props.lg} />
         <HomeSearch />
         <PrivacyMain />
       </div>

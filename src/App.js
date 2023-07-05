@@ -41,29 +41,29 @@ function App() {
           element={<AddCart listItems={listItems} lg={lg} />}
         />
         <Route
-          path="/pages/home/HelpAndContact"
+          path="/pages/home/helpandcontact"
           element={<HelpAndContact listItems={listItems} lg={lg} />}
         />
         <Route
           path="/pages/home/PrivacyChoices"
           element={<PrivacyChoices listItems={listItems} lg={lg} />}
         />
-        <Route path="/pages/home/SignIn" element={<SignIn />} />
-        <Route path="/pages/home/Register" element={<Register />} />
+        <Route path="/pages/home/signIn" element={<SignIn />} />
+        <Route path="/pages/home/register" element={<Register />} />
         <Route
           path="/pages/home/CustomerServices"
           element={<CustomerServices listItems={listItems} lg={lg} />}
         />
         <Route
-          path="/pages/home/EbayAccount"
+          path="/pages/home/ebayaccount"
           element={<EbayAccount listItems={listItems} lg={lg} />}
         />
         <Route
-          path="/pages/home/Buying"
+          path="/pages/home/buying"
           element={<Buying listItems={listItems} lg={lg} />}
         />
         <Route
-          path="/pages/home/MoneyBack"
+          path="/pages/home/moneyback"
           element={<MoneyBack listItems={listItems} lg={lg} />}
         />
       </Routes>

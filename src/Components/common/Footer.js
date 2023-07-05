@@ -21,39 +21,61 @@ const Footer = () => {
           Sell
         </Link>
       ),
-      items: ["Start selling", "Learn to sell", "Affiliates"],
+      items: [
+        { text: "Start selling", path: "/pages/home/startselling" },
+        { text: "Learn to sell", path: "/pages/home/learnselling" },
+        { text: "Affiliates", path: "/pages/home/affiliates" },
+      ],
       title2: "Tools & apps",
-      items2: ["Developers", "Security center", "Site map"],
+      items2: [
+        { text: "Developers", path: "/pages/home/developers" },
+        { text: "Security center", path: "/pages/home/securitycenter" },
+        { text: "Site map", path: "/pages/home/sitemap" },
+      ],
     },
     {
       title: "Stay connected",
-      items: ["eBay's Blogs", "Facebook", "Twitter"],
+      items: [
+        { text: "eBay's Blogs", path: "/pages/home/ebayblogs" },
+        { text: "Facebook", path: "/pages/home/facebook" },
+        { text: "Twitter", path: "/pages/home/twitter" },
+      ],
     },
     {
       title: "About eBay",
       items: [
-        "Company info",
-        "News",
-        "Investors",
-        "Careers",
-        "Government relations",
-        "Advertise with us",
-        "Policies",
-        "Verified Rights Owner (VeRO) Program",
+        { text: "Company info", path: "/pages/home/companyinfo" },
+        { text: "News", path: "/pages/home/news" },
+        { text: "Investors", path: "/pages/home/investors" },
+        { text: "Careers", path: "/pages/home/careers" },
+        { text: "Government relations", path: "/pages/home/government" },
+        { text: "Advertise with us", path: "/pages/home/advertise" },
+        { text: "Policies", path: "/pages/home/policies" },
+        {
+          text: "Verified Rights Owner (VeRO) Program",
+          path: "/pages/home/vero",
+        },
       ],
     },
     {
       title: "Help & Contact",
-      items: ["Seller Information Center", "Contact us"],
+      items: [
+        { text: "Seller Information Center", path: "/pages/home/sellerinfo" },
+        { text: "Contact us", path: "/pages/home/contactus" },
+      ],
       title2: "Community",
-      items2: ["Announcements", "Discussion boards", "eBay Giving Works"],
+      items2: [
+        { text: "Announcements", path: "/pages/home/announcements" },
+        { text: "Discussion boards", path: "/pages/home/discussionboards" },
+        { text: "eBay Giving Works", path: "/pages/home/givingworks" },
+      ],
     },
   ];
 
   return (
     <div className="text-sm">
       <hr />
-      <div className="hidden  lg:flex justify-between mt-4 mb-4 w-[90%] mx-auto">
+      <div className="hidden lg:flex justify-between mt-4 mb-4 w-[90%] mx-auto">
         {columns.map((column, index) => (
           <div key={index}>
             <h1 className="text-black font-semibold mb-3">
@@ -76,21 +98,29 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            {column.title2 && (
-              <>
-                <h1 className="text-black">{column.title2}</h1>
-                <ul>
-                  {column.items2.map((item, i) => (
-                    <li className="text-[#000000] hover:underline" key={i}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
+            {column.title2 &&
+              column.items2 && ( // Add conditional check for column.items2
+                <>
+                  <h1 className="text-black font-bold mt-5 mb-3">
+                    {column.title2}
+                  </h1>
+                  <ul>
+                    {column.items2.map((item, i) => (
+                      <li className="text-[#000000] hover:underline" key={i}>
+                        {item.path ? (
+                          <Link to={item.path}>{item.text}</Link>
+                        ) : (
+                          item.text
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
           </div>
         ))}
       </div>
+
       <div className="bg-[#111820] text-white font-semibold pb-5 lg:hidden ">
         <ul className=" p-3 pt-8 pl-5 mb-4   ">
           <Link to={"/"}>

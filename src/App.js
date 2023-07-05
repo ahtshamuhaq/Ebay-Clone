@@ -12,6 +12,8 @@ import CustomerServices from "./pages/home/CustomerServices";
 import EbayAccount from "./pages/home/EbayAccount";
 import Buying from "./pages/home/Buying";
 import MoneyBack from "./pages/home/MoneyBack";
+import LearnSelling from "./pages/home/LearnSelling";
+import FeedBack from "./pages/home/FeedBack";
 
 function App() {
   const listItems = [
@@ -66,6 +68,11 @@ function App() {
           path="/pages/home/moneyback"
           element={<MoneyBack listItems={listItems} lg={lg} />}
         />
+        <Route
+          path="/pages/home/learnselling"
+          element={<LearnSelling listItems={listItems} lg={lg} />}
+        />
+        <Route path="/pages/home/feedback" element={<FeedBack />} />
       </Routes>
     </div>
   );

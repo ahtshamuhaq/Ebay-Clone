@@ -42,7 +42,11 @@ const Button = ({ variant, children, ...rest }) => {
       ? "bg-transparent  text-black ml-1 w-full flex items-center rounded-full transition-colors duration-300 border font-bold border-black py-2 px-2 mb-1 "
       : variant === "darkCyans"
       ? " bg-[#0053a0] text-white flex items-center  ml-1 w-full transition-colors duration-300 rounded-3xl py-2 px-2 mb-1 "
-      : "";
+      : variant === "outlinedBlack"
+      ? "bg-transparent  text-[#000000] ml-1 w-full flex items-center rounded-full transition-colors duration-300 border font-semibold border-black py-2 px-2 mb-1 "
+      : variant === "whiteBlack"
+      ? "bg-white  text-[#000000] ml-1 w-full flex items-center rounded-full transition-colors duration-300 border font-semibold border-black py-2 px-2 mb-1 "
+      : variant === "";
   const hoverStyles =
     variant === "transparent"
       ? "hover:bg-black hover:text-[#e8f377]"
@@ -52,6 +56,10 @@ const Button = ({ variant, children, ...rest }) => {
       ? "hover:bg-[#193da8] "
       : variant === "transBlack"
       ? "hover:bg-[#c7c7c7] "
+      : variant === "outlinedBlack"
+      ? "hover:bg-[#000000] hover:text-white hover:underline"
+      : variant === "whiteBlack"
+      ? "hover:text-[#ffffff] hover:bg-black "
       : "";
 
   return (

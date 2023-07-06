@@ -3,6 +3,7 @@ import StepsToSell from "./StepsToSell";
 import BestSeller from "./BestSeller";
 import Inspired from "./Inspired";
 import ReadyToSell from "./ReadyToSell";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [message, setMessage] = useState("");
@@ -12,7 +13,6 @@ const HeroSection = () => {
   const readyToSellRef = useRef(null);
 
   useEffect(() => {
-    // Assign the refs once the components are mounted
     stepsRef.current = document.getElementById("stepsToSell");
     inspiredRef.current = document.getElementById("inspired");
     bestPracticesRef.current = document.getElementById("bestPractices");
@@ -76,6 +76,11 @@ const HeroSection = () => {
           more.
         </p>
       </div>
+      <Link to={"/pages/home/feedback"}>
+        <div className=" w-fit p-3 border-2 border-blue-600 text-blue-600 font-bold -rotate-90 right-0 fixed">
+          FeedBack
+        </div>
+      </Link>
       <div className=" bg-[#f7f7f7] block xl:hidden p-8  ">
         <div className="flex flex-col  w-full justify-center">
           <div className="text-xl font-bold w-full">On this page</div>

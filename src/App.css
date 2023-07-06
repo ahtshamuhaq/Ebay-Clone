@@ -6,7 +6,28 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.bg-radial-gradient {
+  background: radial-gradient(
+    circle farthest-corner at top left,
+    #030819 0%,
+    transparent 55%
+  );
+}
+.bg-radiant {
+  background: url(https://ir.ebaystatic.com/cr/v/c1/security_center/header-img-home-02.jpg)
+    left top no-repeat;
+  background-size: 960px auto;
+  height: 476px;
+  float: right;
+  display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .bg-radiant {
+    height: 476px;
+    background-position: center center;
+    background-size: 1000px auto;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

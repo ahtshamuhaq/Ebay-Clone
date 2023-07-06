@@ -14,6 +14,8 @@ import Buying from "./pages/home/Buying";
 import MoneyBack from "./pages/home/MoneyBack";
 import LearnSelling from "./pages/home/LearnSelling";
 import FeedBack from "./pages/home/FeedBack";
+import EbayDevs from "./pages/home/EbayDevs";
+import SecurityCenter from "./pages/home/SecurityCenter";
 
 function App() {
   const listItems = [
@@ -27,6 +29,12 @@ function App() {
     "Saved Searches",
     "Saved Sellers",
     "Messages",
+  ];
+  const listItems2 = [
+    "    About the Developers Program",
+    " Benefits",
+    "  Policies",
+    "  API License Agreement",
   ];
   const lg = ebay;
   return (
@@ -73,6 +81,16 @@ function App() {
           element={<LearnSelling listItems={listItems} lg={lg} />}
         />
         <Route path="/pages/home/feedback" element={<FeedBack />} />
+        <Route
+          path="/pages/home/ebaydevs"
+          element={
+            <EbayDevs listItems={listItems} listItems2={listItems2} lg={lg} />
+          }
+        />
+        <Route
+          path="/pages/home/securitycenter"
+          element={<SecurityCenter listItems={listItems} lg={lg} />}
+        />
       </Routes>
     </div>
   );

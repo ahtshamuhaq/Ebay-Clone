@@ -28,7 +28,7 @@ const Footer = () => {
       ],
       title2: "Tools & apps",
       items2: [
-        { text: "Developers", path: "/pages/home/developers" },
+        { text: "Developers", path: "/pages/home/ebaydevs" },
         { text: "Security center", path: "/pages/home/securitycenter" },
         { text: "Site map", path: "/pages/home/sitemap" },
       ],

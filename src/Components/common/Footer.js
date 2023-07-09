@@ -36,7 +36,7 @@ const Footer = () => {
     {
       title: "Stay connected",
       items: [
-        { text: "eBay's Blogs", path: "/pages/home/ebayblogs" },
+        { text: "eBay's Blogs", path: "/pages/home/blogs" },
         { text: "Facebook", path: "/pages/home/facebook" },
         { text: "Twitter", path: "/pages/home/twitter" },
       ],
@@ -44,7 +44,7 @@ const Footer = () => {
     {
       title: "About eBay",
       items: [
-        { text: "Company info", path: "/pages/home/companyinfo" },
+        { text: "Company info", path: "/pages/home/company" },
         { text: "News", path: "/pages/home/news" },
         { text: "Investors", path: "/pages/home/investors" },
         { text: "Careers", path: "/pages/home/careers" },
@@ -61,7 +61,7 @@ const Footer = () => {
       title: "Help & Contact",
       items: [
         { text: "Seller Information Center", path: "/pages/home/sellerinfo" },
-        { text: "Contact us", path: "/pages/home/contactus" },
+        { text: "Contact us", path: "/pages/contactus/index" },
       ],
       title2: "Community",
       items2: [

@@ -13,12 +13,29 @@
     transparent 55%
   );
 }
+.hoverable .hidden-section {
+  display: none;
+}
+
+.hoverable:hover .hidden-section {
+  display: block;
+}
+.hoverable:hover .text {
+  color: blue;
+}
 .bg-radiant {
   background: url(https://ir.ebaystatic.com/cr/v/c1/security_center/header-img-home-02.jpg)
     left top no-repeat;
   background-size: 960px auto;
   height: 476px;
   float: right;
+  display: block;
+}
+.bg-radiants {
+  background: url(https://static.ebayinc.com/static/assets/Uploads/Banners/_resampled/FillWzEyMDAsNDMwXQ/230503-Impact-report-promo-v1-hub-promo-desktop-3360x1204.jpg)
+    left top no-repeat;
+  background-size: 1020px auto;
+  height: 350px;
   display: block;
 }
 @media only screen and (max-width: 1024px) {

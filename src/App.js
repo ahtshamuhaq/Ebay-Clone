@@ -16,6 +16,9 @@ import LearnSelling from "./pages/home/LearnSelling";
 import FeedBack from "./pages/home/FeedBack";
 import EbayDevs from "./pages/home/EbayDevs";
 import SecurityCenter from "./pages/home/SecurityCenter";
+import Blogs from "./pages/home/Blogs";
+import Index from "./pages/Contactus/Index";
+import Company from "./pages/home/Company";
 
 function App() {
   const listItems = [
@@ -91,6 +94,9 @@ function App() {
           path="/pages/home/securitycenter"
           element={<SecurityCenter listItems={listItems} lg={lg} />}
         />
+        <Route path="/pages/home/blogs" element={<Blogs />} />
+        <Route path="/pages/contactus/index" element={<Index />} />
+        <Route path="/pages/home/company" element={<Company />} />
       </Routes>
     </div>
   );

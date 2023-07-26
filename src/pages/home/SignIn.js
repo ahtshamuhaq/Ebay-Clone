@@ -1,13 +1,47 @@
+import axios from "axios";
 import React, { useState } from "react";
 import lg from "./../../pictures/ebaylg.png";
 import { Button } from "../../Components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const SignIn = () => {
   const [inputValue, setInputValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("/api/routes/authRoutes", {
+        username: inputValue,
+        password,
+      });
+      localStorage.setItem("token", response.data.token); // save the token to local storage
+      navigate("/home"); // navigate to home page or wherever you want
+    } catch (error) {
+      // handle error
+      console.error(error);
+    }
+  };
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   const toggleText = () => {
     setIsOpen(!isOpen);
   };
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+
+  const handlePasswordFocus = () => {
+    setIsPasswordFocused(true);
+  };
+
+  const handlePasswordBlur = () => {
+    setIsPasswordFocused(false);
+  };
+
   return (
     <div>
       <div className="w-[95%] mt-4  mx-auto ">
@@ -45,9 +79,42 @@ const SignIn = () => {
               </label>
             </div>
           </div>
+          <div className="flex mt-5 mr-4 justify-center items-center">
+            <div className="relative">
+              <input
+                type={passwordVisible ? "text" : "password"}
+                id="floating_filled"
+                class="block  rounded-2xl font-bold border border-black px-2.5 pb-2.5 w-[280px] pt-5 sm:w-[350px] text-sm text-gray-900 bg-[#f7f7f7] dark:bg-[#f7f7f7]  appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                value={password}
+                onChange={handlePasswordChange}
+                onFocus={handlePasswordFocus}
+                onBlur={handlePasswordBlur}
+              />
+              <label
+                htmlFor="floating_filled"
+                class="absolute text-sm font-bold text-black dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-black peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4"
+              >
+                Password
+              </label>
+            </div>
+            <span
+              className="transform -translate-y-1/2 cursor-pointer mt-5 -ml-8"
+              onClick={togglePasswordVisibility}
+            >
+              {passwordVisible ? (
+                <i className="fa fa-eye-slash"></i>
+              ) : (
+                <i className="fa fa-eye"></i>
+              )}
+            </span>
+          </div>
+
           <div className="flex justify-center items-start mt-5">
-            <div className="w-[280px] sm:w-[350px] ">
-              <Button variant={inputValue ? "darkCyan" : "lightGray"}>
+            <div onClick={handleLogin} className="w-[280px] sm:w-[350px] ">
+              <Button
+                variant={inputValue && password ? "darkCyan" : "lightGray"}
+              >
                 Continue
               </Button>
             </div>

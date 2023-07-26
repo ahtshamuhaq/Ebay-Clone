@@ -11,15 +11,19 @@ const SignIn = () => {
   const navigate = useNavigate();
   const handleLogin = async () => {
     try {
-      const response = await axios.post("/api/routes/authRoutes", {
-        username: inputValue,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        {
+          username: inputValue,
+          password,
+        }
+      );
+
       localStorage.setItem("token", response.data.token); // save the token to local storage
       navigate("/home"); // navigate to home page or wherever you want
     } catch (error) {
       // handle error
-      console.error(error);
+      console.error("THE USER DOOESNOT EXIST");
     }
   };
 

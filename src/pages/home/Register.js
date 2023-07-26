@@ -1,8 +1,32 @@
 import React, { useEffect, useState } from "react";
 import lg from "./../../pictures/ebaylg.png";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Button } from "../../Components";
 const Register = () => {
+  const navigate = useNavigate(); // <-- Use navigate hook
+
+  const handleRegister = async () => {
+    // <-- Create the register function
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+          accountType: isBusinessAccount ? "business" : "personal",
+        }
+      );
+
+      localStorage.setItem("token", response.data.token);
+      navigate("/");
+    } catch (error) {
+      console.error("CONNECTION FAILED");
+    }
+  };
   const [isBusinessAccount, setIsBusinessAccount] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const toggleText = () => {
@@ -267,7 +291,7 @@ const Register = () => {
                   </p>
                 )}
                 <p className="mt-10">Business location</p>
-                <select className="w-full  sm:w-[450px] rounded-xl">
+                {/* <select className="w-full  sm:w-[450px] rounded-xl">
                   <option value="AFG">Afghanistan</option>
                   <option value="ALA">Åland Islands</option>
                   <option value="ALB">Albania</option>
@@ -529,8 +553,8 @@ const Register = () => {
                   <option value="YEM">Yemen</option>
                   <option value="ZMB">Zambia</option>
                   <option value="ZWE">Zimbabwe</option>
-                </select>
-                <p className="text-gray-500 text-xs break-words">
+                </select> */}
+                {/* <p className="text-gray-500 text-xs break-words">
                   If you don't have a legal business, enter country of your
                   residence.
                 </p>
@@ -552,8 +576,8 @@ const Register = () => {
                     User Privacy Notice
                   </span>{" "}
                   .
-                </p>
-                <div className="w-[90%] mt-5 mb-4 ">
+                </p> */}
+                <div className="w-[90%] mt-5 mb-4 " onClick={handleRegister}>
                   <Button variant={isForm2Filled ? "darkCyan" : "lightGray"}>
                     Create Account
                   </Button>
@@ -652,7 +676,7 @@ const Register = () => {
                         characters.
                       </p>
                     )}
-                    <p className="text-gray-500 mt-4 text-sm ">
+                    {/* <p className="text-gray-500 mt-4 text-sm ">
                       By{" "}
                       <span className="font-semibold">
                         {" "}
@@ -667,19 +691,22 @@ const Register = () => {
                         User <br /> Privacy Notice
                       </span>{" "}
                       .
-                    </p>
-                    <div className="w-full mt-4 sm:w-4/5 ">
+                    </p> */}
+                    <div
+                      className="w-full mt-4 sm:w-4/5 "
+                      onClick={handleRegister}
+                    >
                       <Button variant={isFormFilled ? "darkCyan" : "lightGray"}>
                         Create Account
                       </Button>
                     </div>
                   </div>
-                  <div className="hidden md:flex  md:flex-col items-center">
+                  {/* <div className="hidden md:flex  md:flex-col items-center">
                     <div className="border-l border-l-slate-700 h-36 "></div>
                     <div>Or</div>
                     <div className="border-l border-l-slate-700 h-36"></div>
-                  </div>
-                  <div className="flex justify-center items-start mt-5">
+                  </div> */}
+                  {/* <div className="flex justify-center items-start mt-5">
                     <div className="  ">
                       <div className="w-full  sm:w-[350px] mt-5 ">
                         <Button variant="darkCyans">
@@ -702,14 +729,14 @@ const Register = () => {
                         </Button>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <hr className="mt-4" />
                 </div>
               </div>
             )}
           </div>
         </div>
-        <div className="  mx-auto  p-2">
+        {/* <div className="  mx-auto  p-2">
           <p className="mb-24 text-xs mt-6 text-center   w-full">
             Copyright © 1995-2023 eBay Inc. All Rights Reserved.
             <span className="underline ml-1 text-sm">Accessibility</span>,
@@ -727,7 +754,7 @@ const Register = () => {
             ,<span className="underline ml-1 text-sm">User Agreement</span> and{" "}
             <span className="underline ml-1 text-sm">AdChoice</span>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
